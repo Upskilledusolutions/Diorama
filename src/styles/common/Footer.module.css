@@ -1,0 +1,126 @@
+/* Footer Container */
+.container {
+    position: relative;
+    background-color: #255357;
+    padding: 100px 20px;
+    color: white;
+    overflow: hidden;
+}
+
+/* Background Image */
+.bg {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: auto;
+    opacity: 0.2;
+    z-index: 0;
+}
+
+/* Footer Content Layout */
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+/* Left and Right Sections */
+.left,
+.right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Links Section */
+.links {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    font-size: 1rem;
+}
+
+.links div {
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.links div:hover {
+    color: #ffcc00;
+}
+
+/* Center Diorama */
+.center {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+/* Copyright Text */
+.copy {
+    font-size: 0.9rem;
+    color: #ddd;
+}
+
+/* Right Section Info */
+.info {
+    display: flex;
+    gap: 15px;
+}
+
+/* Join Us Button */
+.button {
+    background-color: #ff7f50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background-color: #ff5722;
+}
+
+/* Social Icons */
+.socials {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+    font-size: 1.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.socials svg {
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.socials svg:hover {
+    color: #ffcc00;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .links {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .info{
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,38 @@
+.cards{
+    padding: 80px 10vw;
+    display: flex;
+    justify-content: center;
+    gap: 2vw;
+}
+.card{
+    border: 1px solid rgb(211, 211, 211);
+    border-radius: 5px;
+    padding: 40px 2vw;
+    width: 18vw;
+    box-shadow: rgba(0, 0, 0, 0.2) 3px 3px 4px;
+}
+.card:hover{
+    box-shadow: rgba(0, 0, 0, 0.4) 3px 3px 4px;
+}
+.icon{
+    font-size: 40px;
+}
+.title{
+    font-size: 26px;
+    font-weight: 900;
+}
+.text{
+    color: orange;
+    font-weight: 900;
+}
+@media (max-width: 768px) {
+    .cards{
+        flex-direction: column;
+        gap: 30px;
+        padding: 80px 5vw;
+    }
+    .card{
+        padding: 40px 5vw;
+        width: 88%;
+    }
+}

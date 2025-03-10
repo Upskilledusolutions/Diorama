@@ -1,0 +1,159 @@
+/* Main Container */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Left Section */
+.left {
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Frame for Image Slider */
+.frame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 27vw;
+    height: 250px;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #0A303A;
+    margin-top: 100px;
+}
+
+/* Image Slider */
+.slider {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.img {
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    top: 5%;
+    left: 5%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: opacity 1s ease-in-out;
+}
+
+/* Show only active image */
+.active {
+    opacity: 1;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+/* TV Top and Bottom */
+.top {
+    position: absolute;
+    top: -128px;
+    width: auto;
+    height: 130px;
+}
+
+.bottom {
+    position: absolute;
+    bottom: -78px;
+    height: 80px;
+    width: auto;
+}
+
+/* Text Section */
+.textSection {
+    margin-top: 40px;
+    width: 60vw;
+    text-align: left;
+}
+
+.textSection h2 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.testimonialText {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 15px 0;
+}
+
+.author {
+    font-size: 1rem;
+    color: #555;
+    font-weight: bold;
+}
+
+/* Button */
+.btn {
+    border: 1px solid hsl(36, 100%, 50%);
+    color: hsl(36, 100%, 50%);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+    background: none;
+}
+
+.btn:hover {
+    background-color: hsl(36, 100%, 50%);
+    color: white;
+}
+
+/* Sliding "last" Image (Controlled by Scroll) */
+.lastWrapper {
+    position: absolute;
+    bottom: 0px;
+    right: 100px;
+    width: 250px;
+}
+
+.last {
+    width: 100%;
+    height: auto;
+}
+.content{
+    width: 50%;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column-reverse;
+    }
+    .textSection {
+        width: 90vw;
+    }
+    .content{
+        width: 90%;
+    }
+    .top {
+        height: 80px;
+        top: -78px;
+    }
+    .frame {
+        width: 80vw;
+    }
+    .bottom {
+        height: 40px;
+        bottom: -38px;
+    }
+    .lastWrapper {
+        display: none;
+    }
+}

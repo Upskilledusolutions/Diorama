@@ -1,0 +1,65 @@
+.hero {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .heroVideo {
+    position: absolute;
+    width: 15vw; /* Adjust size */
+    height: auto;
+    object-fit: cover;
+    top: 15%;
+  }
+  
+  .heroContent {
+    position: absolute;
+    display: flex;
+    gap: 5vw;
+    left: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: left;
+    width: 100%;
+    font-size: 1.2rem;
+    z-index: 10; /* Ensures it's above the video */
+  }
+
+  .heroContent h1{
+    font-size: 40px;
+    font-weight: 900;
+    margin-bottom: 20px;
+  }
+  .written{
+    width: 45vw;
+  }
+  .cloud{
+    width: auto;
+    height: 250px;
+  }
+  
+  @media (max-width: 768px) {
+    .hero {
+      padding-top: 20vh;
+      height: 40vh;
+    }
+    .heroVideo{
+      display: none;
+    }
+    .heroContent {
+      flex-direction: column;
+      position: static;
+      margin-top: 300px;
+    }
+    .written{
+      width: 90%;
+      padding: 0 5%;
+    }
+    .heroContent h1{
+      font-size: 32px;
+    }
+  }

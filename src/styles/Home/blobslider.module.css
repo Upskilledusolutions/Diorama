@@ -1,0 +1,148 @@
+/* Main Slider Container */
+.sliderContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 94vw; /* Allow enough width for everything */
+    height: 500px;
+    padding: 20px 0;
+    gap: 50px; /* Adds space between blob and text area */
+    margin-bottom: 50px;
+  }
+  
+  /* Blob Wrapper (Ensures Full Visibility) */
+  .blobWrapper {
+    width: 40vw;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  /* Image inside Blob */
+  .img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Navigation Arrows */
+  .prev,
+  .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: white;
+    border: none;
+    color: black;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    transition: background 0.3s;
+  }
+  
+  .prev:hover,
+  .next:hover {
+    background: rgba(255, 255, 255, 0.4);
+  }
+  
+  .prev {
+    left: 5%;
+  }
+  
+  .next {
+    right: 5%;
+  }
+  
+  /* Flex container for points and button */
+  .flex {
+    display: flex;
+    align-items: flex-start; /* Align points and button to the left */
+    gap: 2vw; /* Adds space between points and button */
+  }
+  
+  /* Stacking Points Vertically */
+  .points {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 20vw;
+    padding-top: 50px;
+  }
+  
+  .point {
+    font-size: 22px;
+    transition: color 0.3s ease-in-out;
+  }
+
+  /* Scroll Animated Learn Image */
+.imganimate {
+    width: 500px;
+    height: auto;
+    overflow: hidden;
+  }
+  
+  .activePoint {
+    color: #ff0066;
+    font-weight: bold;
+  }
+  .imgconatiner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  /* Button Styling */
+  .btn {
+    border: 2px solid rgb(255, 157, 0);
+    color: rgb(255, 157, 0);
+    width: 10vw;
+    font-weight: 900;
+    padding: 10px 20px;
+    background: none;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-top: 20px;
+    transition: 0.5s;
+  }
+  .btn:hover{
+background-color: rgb(255, 157, 0);
+color: white;
+  }
+  .image{
+    width: 20vw;
+    height: auto;
+  }
+
+  @media (max-width: 768px) {
+    .blobWrapper { width: 60vw; overflow:visible;}
+    .point { font-size: 18px; }
+    .sliderContainer {flex-direction: column; gap: 0;position: static; height: 1000px;}
+    .flex {
+      flex-direction: column;
+      gap: 50px;
+    }
+    .imganimate {
+      overflow: visible;
+    }
+    .points {
+      padding-top: 20px;
+      width: 100%;
+    }
+    .image{
+      width: 80vw;
+    }
+    .btn {
+      width: auto;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .blobWrapper { width: 90vw; }
+    .point { font-size: 16px; }
+    .btn { font-size: 14px; padding: 8px 16px; }
+  }
+  
