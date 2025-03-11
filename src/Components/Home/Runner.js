@@ -33,7 +33,7 @@ export default function Runner() {
       <div className={styles.content}>
         <div className={styles.title}>Join us now!</div>
         <div className={styles.text}>
-          Become a part of our exciting children's magazine, where curiosity meets creativity! We bring engaging stories, fun activities, educational content, and interactive challenges designed to inspire young minds. Whether you're a parent, teacher, or young explorer, our platform is perfect for learning and entertainment. Subscribe to receive fresh content, contribute your own stories or artwork, and connect with a vibrant community. Let's nurture imagination, encourage reading, and make learning fun together. Join us today and unlock a world of adventure, knowledge, and creativity for your child!
+          Become a part of our exciting children&apos;s magazine, where curiosity meets creativity! We bring engaging stories, fun activities, educational content, and interactive challenges designed to inspire young minds. Whether you&apos;re a parent, teacher, or young explorer, our platform is perfect for learning and entertainment. Subscribe to receive fresh content, contribute your own stories or artwork, and connect with a vibrant community. Let&apos;s nurture imagination, encourage reading, and make learning fun together. Join us today and unlock a world of adventure, knowledge, and creativity for your child!
         </div>
         <div className={styles.flex}>
             <button className={styles.btn1}>Schedule a Meeting</button>
