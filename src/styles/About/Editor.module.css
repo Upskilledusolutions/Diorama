@@ -1,0 +1,87 @@
+/* Container */
+.container {
+    padding: 50px 10vw;
+    background: #f9f9f9;
+  }
+  
+  /* Flex container for profile */
+  .profileFlex {
+    display: flex;
+    align-items: center;
+    gap: 5vw;
+  }
+
+  
+  /* Image Wrapper */
+  .imageWrapper {
+    flex: 1;
+  }
+  
+  /* Editor Image */
+  .editorImage {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  
+  /* Text Content */
+  .textWrapper {
+    flex: 1;
+  }
+  
+  /* Editor Name & Title */
+  .editorName {
+    font-size: 3rem;
+    margin: 0;
+    color: #333;
+  }
+  
+  .editorTitle {
+    font-size: 1.8rem;
+    margin: 10px 0;
+    color: #555;
+  }
+  
+  /* Editor Bio */
+  .editorBio {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #666;
+    margin: 20px 0;
+  }
+  
+  /* Statistics Section */
+  .stats {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 20px 0;
+  }
+  
+  .stat {
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  .statNumber {
+    font-weight: bold;
+    margin-right: 5px;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .profileFlex {
+      flex-direction: column;
+    }
+    .editorName {
+      font-size: 2.5rem;
+    }
+    .editorTitle {
+      font-size: 1.5rem;
+    }
+    .stats {
+      justify-content: center;
+    }
+  }
+  
