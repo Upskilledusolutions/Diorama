@@ -40,6 +40,8 @@ export default function Kids() {
 
   return (
     <div ref={ref} className={styles.container}>
+      <Image className={styles.tree} src={'/Home/tree1.svg'} width={400} height={400} alt="mount"/>
+      <Image className={styles.mount} src={'/Home/Mountain1.png'} width={400} height={400} alt="tree"/>
       <h2 className={styles.title}>Kids with Different Age Groups</h2>
 
       <div className={styles.cards}>

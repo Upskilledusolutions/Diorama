@@ -2,7 +2,7 @@
 .container {
     text-align: center;
     padding: 50px 20px 80px;
-    background: linear-gradient(to right, #ff9a9e, #fad0c4);
+    background-color: #b8d8ff;
     position: relative;
     overflow: hidden;
   }
@@ -13,6 +13,22 @@
     font-weight: bold;
     margin-bottom: 30px;
     color: white;
+  }
+
+  .mount{
+    position: absolute;
+    bottom: -30px;
+    left: 0px;
+    width: 20vw;
+    height: auto;
+  }
+
+  .tree{
+    position: absolute;
+    bottom: 0px;
+    right: 5vw;
+    width: 5vw;
+    height: auto;
   }
   
   /* Cards Layout */
@@ -32,6 +48,8 @@
     text-align: center;
     overflow: hidden;
     width: 15vw;
+    position: relative;
+    z-index: 2;
   }
   
   .card:hover {
@@ -78,5 +96,11 @@
     }
     .peekingWrapper {
       display: none;
+    }
+    .mount{
+      width: 70vw;
+    }
+    .tree{
+width: 20vw;
     }
   }

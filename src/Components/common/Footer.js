@@ -7,7 +7,10 @@ import { RiInstagramFill } from "react-icons/ri";
 export default function Footer() {
   return (
     <footer className={styles.container}>
-      <Image className={styles.bg} src={"/Home/footerbg.png"} width={1000} height={500} alt="image" />
+      <Image className={styles.bg} src={"/Home/hill.png"} width={1000} height={500} alt="image" />
+      <Image className={styles.tree2} src={"/Home/tree2.svg"} width={1000} height={500} alt="image" />
+      <Image className={styles.tree3} src={"/Home/tree3.svg"} width={1000} height={500} alt="image" />
+      <Image className={styles.wolf} src={"/Home/wolf.png"} width={1000} height={500} alt="image" />
 
       <div className={styles.content}>
         {/* Left Section */}

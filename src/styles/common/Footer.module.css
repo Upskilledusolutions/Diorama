@@ -1,9 +1,7 @@
 /* Footer Container */
 .container {
     position: relative;
-    background-color: #255357;
     padding: 100px 20px;
-    color: white;
     overflow: hidden;
 }
 
@@ -17,6 +15,35 @@
     height: auto;
     opacity: 0.2;
     z-index: 0;
+}
+
+.tree2{
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 3vw;
+    height: auto;
+}
+
+.tree3{
+    position: absolute;
+    top: 20px;
+    right: 15vw;
+    width: 3vw;
+    height: auto;
+}
+
+.wolf{
+    position: absolute;
+    top: 30px;
+    left: 10vw;
+    width: 8vw;
+    height: auto;
+    transition: 0.3s;
+}
+
+.wolf:hover{
+    transform: rotate3d(1, 1, 1, 15deg);
 }
 
 /* Footer Content Layout */
@@ -122,5 +149,15 @@
     }
     .info{
         flex-direction: column;
+    }
+    .tree2, .tree3{
+        width: 13vw;
+        top: 50px;
+    }
+    .wolf{
+        width: 30vw;
+    }
+    .bg {
+        width: 1000%;
     }
 }
