@@ -57,10 +57,10 @@ export default function Navbar() {
       <div className={`${styles.links} ${isMobileMenuOpen ? styles.mobileOpen : ""}`}>
         <ul className={styles.flex}>
           <Link href={'/'} className={styles.li} onClick={() => setIsMobileMenuOpen(false)}>Home</Link>
-          <li className={styles.li} onClick={() => setIsMobileMenuOpen(false)}>Poetry</li>
+          <Link href={'/Poetry'} className={styles.li} onClick={() => setIsMobileMenuOpen(false)}>Poetry</Link>
           <li className={styles.li} onClick={() => setIsMobileMenuOpen(false)}>Prose</li>
           <li className={styles.li} onClick={() => setIsMobileMenuOpen(false)}>Creative Non-Fiction</li>
-          <li className={styles.li} onClick={() => setIsMobileMenuOpen(false)}>Gallery</li>
+          <Link href={'/Gallery'} className={styles.li} onClick={() => setIsMobileMenuOpen(false)}>Gallery</Link>
 
           {/* Submissions Dropdown */}
           <Link
