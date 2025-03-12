@@ -1,7 +1,7 @@
 import React from 'react';
-import styles from '@/styles/Poetry/Poetry.module.css';
+import styles from '@/styles/Prose/Proses.module.css';
 import Link from 'next/link';
-import { FaComment, FaHeart, FaRegComment, FaRegHeart } from "react-icons/fa";
+import { FaComment, FaHeart, FaRegComment, FaRegHeart } from 'react-icons/fa';
 
 export default function Poem({Poemdata}) {
   return (
@@ -16,7 +16,7 @@ export default function Poem({Poemdata}) {
             ))}
         </div>
         <div className={styles.flex5}>
-        <Link href={`/Poetry/Poem/${Poemdata.poemid}`} className={styles.text1}>
+        <Link href={`/Prose/${Poemdata.poemid}`} className={styles.text1}>
           Read more
         </Link>
         <div className={styles.flex6}>

@@ -4,6 +4,7 @@ import { useRouter } from 'next/router';
 import Link from 'next/link';
 import styles from '@/styles/Poetry/Poem.module.css';
 import { FaTwitter, FaFacebook } from "react-icons/fa6";
+import { FaComment, FaHeart } from 'react-icons/fa';
 
 const Poemdata = [
   {
@@ -38,7 +39,7 @@ export default function PoemDetail() {
   return (
     <div className={styles.poemDetail}>
       <Link href="/Poetry" className={styles.text1}>Go back</Link>
-      <div>
+      <div className={styles.middle}>
         <h1 className={styles.title}>{poem.title}</h1>
         <div className={styles.text}>
           {poem.poem.split("<br/>").map((line, index) => (
@@ -52,6 +53,8 @@ export default function PoemDetail() {
       <div className={styles.icons}>
         <FaTwitter className={styles.icon} />
         <FaFacebook className={styles.icon} />
+        <FaHeart className={styles.icon} />
+        <FaComment className={styles.icon} />
       </div>
     </div>
   );

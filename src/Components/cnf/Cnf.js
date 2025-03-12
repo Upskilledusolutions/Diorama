@@ -1,22 +1,21 @@
 import React from 'react';
-import styles from '@/styles/Poetry/Poetry.module.css';
+import styles from '@/styles/Prose/Proses.module.css';
 import Link from 'next/link';
-import { FaComment, FaHeart, FaRegComment, FaRegHeart } from "react-icons/fa";
+import { FaComment, FaHeart, FaRegComment, FaRegHeart } from 'react-icons/fa';
 
 export default function Poem({Poemdata}) {
   return (
     <div className={styles.poem}>
         <div className={styles.title}>{Poemdata.title}</div>
         <div className={styles.text}>
-            {Poemdata.poem.slice(0,250).split("<br/>").map((line, index) => (
+            {Poemdata.poem.slice(0,350).split("<br/>").map((line, index) => (
                 <React.Fragment key={index}>
-                    {line}
-                    <br />
+                    {line}...
                 </React.Fragment>
             ))}
         </div>
         <div className={styles.flex5}>
-        <Link href={`/Poetry/Poem/${Poemdata.poemid}`} className={styles.text1}>
+        <Link href={`/CreativeNonFiction/${Poemdata.poemid}`} className={styles.text1}>
           Read more
         </Link>
         <div className={styles.flex6}>

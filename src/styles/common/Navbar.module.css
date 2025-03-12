@@ -139,47 +139,60 @@
     display: block;
   }
 
+  /* For mobile, use max-height transition instead of height */
   .links {
     position: absolute;
-    top: 60px;
+    top: 75px;
     left: 0;
     width: 100%;
     background: white;
+    display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    height: 0;
     overflow: hidden;
-    transition: height 0.3s ease-in-out;
-  }
-
-  .links .flex {
-    flex-direction: column;
-    gap: 15px;
-    padding: 20px;
+    max-height: 0;
+    transition: max-height 0.3s ease-in-out;
   }
 
   .links.mobileOpen {
-    height: auto;
+    max-height: 500px; /* Adjust based on the expected content height */
   }
 
+  .flex {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    width: 100%;
+  }
+
+  .li {
+    width: 100%;
+    padding: 10px 5vw;
+    display: block;
+    color: black;
+    text-decoration: none;
+  }
+
+  /* Dropdown Menu on Mobile */
   .dropdownMenu {
     position: relative;
     box-shadow: none;
     display: none;
     opacity: 1;
     visibility: visible;
+    transition: none;
+    padding: 0;
+    width: 100%;
   }
 
-  .dropdown:hover .dropdownMenu {
+  /* When a dropdown is toggled open, show the menu */
+  .dropdown.open .dropdownMenu {
     display: flex;
+    flex-direction: column;
   }
 
+  /* Hide the login button on mobile if needed */
   .visitbtn {
     display: none;
-  }
-  .navbar{
-    width: 90vw;
-    overflow-x: hidden;
   }
 }

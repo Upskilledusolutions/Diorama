@@ -8,6 +8,10 @@
     display: flex;
     justify-content: space-between;
   }
+
+  .middle{
+    max-width: 50vw;
+  }
   
   .title {
     font-size: 2.5rem;
@@ -58,10 +62,6 @@
 
 .text1:hover::after {
     width: 100%;
-}
-
-.middle{
-  max-width: 50vw;
 }
 
 @media (max-width: 768px) {
