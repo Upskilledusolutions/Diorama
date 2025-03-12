@@ -71,7 +71,7 @@ export default function Navbar() {
             Submissions
             <ul className={styles.dropdownMenu}>
               <Link href={'/Submissions/HowtoSubmit'} className={styles.li} onClick={() => setIsMobileMenuOpen(false)}>How to Submit</Link>
-              <Link href={'/Submissions/FAQs'} className={styles.li} onClick={() => setIsMobileMenuOpen(false)}>FAQ's</Link>
+              <Link href={'/Submissions/FAQs'} className={styles.li} onClick={() => setIsMobileMenuOpen(false)}>FAQ</Link>
             </ul>
           </Link>
 
