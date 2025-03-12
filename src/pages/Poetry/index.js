@@ -3,6 +3,7 @@ import Quotes from '@/Components/Poetry/Quotes'
 import React from 'react'
 import styles from '@/styles/Poetry/Poetry.module.css'
 import FadeInSection from '@/Components/Poetry/FadeInSection';
+import Image from 'next/image';
 
 const Poemdata = [
     {
@@ -31,6 +32,22 @@ const Quotesdata = [
 
 export default function index() {
   return (
+    <div>
+    <div className={styles.banner}>
+    <Image
+      className={styles.squirrel}
+      src={"/Gallery/fox.png"}
+      width={400}
+      height={400}
+      alt="image"
+    />
+    <div className={styles.content}>
+      <div className={styles.heading}>Poetry</div>
+      <div className={styles.text}>
+        We help children engage through fun and educational Magazines.
+      </div>
+    </div>
+  </div>
     <div className={styles.container}>
         <div className={styles.left}>
             <FadeInSection >
@@ -63,6 +80,7 @@ export default function index() {
             <Poem Poemdata={Poemdata[2]}/>
             </FadeInSection >
         </div>
+    </div>
     </div>
   )
 }
