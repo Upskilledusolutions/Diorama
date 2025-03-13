@@ -132,6 +132,38 @@
   display: none;
   cursor: pointer;
 }
+.linkcontainer{
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  position: relative;
+}
+.dropdownarr{
+  rotate: 90deg;
+  transition: 0.3s;
+}
+.dropdownMenu2{
+  position: absolute;
+  top: -1000px;
+  left: 0;
+  padding: 15px 2vw;
+  background-color: white;
+  width: max-content;
+}
+.dropdownMenu2 .li{
+  display: block;
+}
+.linkcontainer:hover .dropdownarr{
+  rotate: -90deg;
+}
+.linkcontainer:hover .dropdownMenu2{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 5px;
+  border: 1px solid rgb(239, 239, 239);
+  top: 20px;
+}
 
 /* Mobile Navigation */
 @media (max-width: 768px) {
@@ -161,12 +193,11 @@
   .flex {
     flex-direction: column;
     gap: 15px;
-    padding: 20px;
-    width: 100%;
+    padding: 20px 2.55%;
+    width: 95%;
   }
 
   .li {
-    width: 100%;
     padding: 10px 5vw;
     display: block;
     color: black;
@@ -185,14 +216,28 @@
     width: 100%;
   }
 
+  .linkcontainer:hover .dropdownMenu2{
+    position: static;
+    display: flex;
+    flex-direction: column;
+  }
+
   /* When a dropdown is toggled open, show the menu */
-  .dropdown.open .dropdownMenu {
+  .dropdown.open .dropdownMenu2 {
+    position: static;
     display: flex;
     flex-direction: column;
   }
 
   /* Hide the login button on mobile if needed */
   .visitbtn {
+    display: none;
+  }
+
+  .linkcontainer{
+    justify-content: space-between;
+  }
+  .dropdownMenu3{
     display: none;
   }
 }
