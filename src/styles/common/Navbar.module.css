@@ -161,7 +161,6 @@
   flex-direction: column;
   gap: 20px;
   border-radius: 5px;
-  border: 1px solid rgb(239, 239, 239);
   top: 20px;
 }
 
@@ -214,6 +213,9 @@
     transition: none;
     padding: 0;
     width: 100%;
+  }
+  .dropdownMenu2{
+    border: none;
   }
 
   .linkcontainer:hover .dropdownMenu2{
