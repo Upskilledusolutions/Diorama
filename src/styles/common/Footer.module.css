@@ -12,7 +12,8 @@
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
-    height: auto;
+    height: 500px; /* Fixed height to ensure visibility */
+    object-fit: cover; /* Ensure it covers the container */
     opacity: 0.2;
     z-index: 0;
 }
@@ -159,5 +160,6 @@
     }
     .bg {
         width: 1000%;
+        height: 1000px; 
     }
 }
