@@ -4,7 +4,7 @@ import Image from 'next/image'
 import EditorProfileOne from '@/Components/About/Editor';
 import EditorProfileTwo from '@/Components/About/Editor2';
 
-export default function index() {
+export default function Index() {
   return (
     <div>
       <div className={styles.banner}>

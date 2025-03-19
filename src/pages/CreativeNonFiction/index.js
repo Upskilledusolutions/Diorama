@@ -25,7 +25,7 @@ const Poemdata = [
   ];
 
 
-export default function index() {
+export default function Index() {
    // Global scroll for the poet video
    const { scrollYProgress } = useScroll();
    const poetVideoRef = useRef(null);

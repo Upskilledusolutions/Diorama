@@ -32,7 +32,7 @@ const Quotesdata = [
         "quote": "Dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."}
 ]
 
-export default function index() {
+export default function Index() {
  // Global scroll for the poet video
   const { scrollYProgress } = useScroll();
   const poetVideoRef = useRef(null);
