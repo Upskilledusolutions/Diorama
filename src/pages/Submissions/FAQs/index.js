@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaPlus } from "react-icons/fa";
 import styles from "@/styles/Submissions/FAQ.module.css";
+import Image from "next/image";
 
 const faqData = [
     {
@@ -81,7 +82,21 @@ function FAQItem({ faq }) {
 export default function FAQPage() {
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>Frequently Asked Questions</h1>
+      <div className={styles.banner}>
+        <Image
+          className={styles.squirrel}
+          src={"/banners/5.jpg"}
+          width={400}
+          height={400}
+          alt="image"
+        />
+        <div className={styles.content}>
+          <div className={styles.heading}>FAQs</div>
+          <div className={styles.text}>
+            We help children engage through fun and educational Magazines.
+          </div>
+        </div>
+      </div>
       <div className={styles.faqList}>
         {faqData.map((faq, index) => (
           <FAQItem key={index} faq={faq} />

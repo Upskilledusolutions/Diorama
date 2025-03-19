@@ -4,7 +4,75 @@
     border: 1px solid rgb(229, 229, 229);
     display: flex;
     box-shadow: rgba(0, 0, 0, 0.25) 3px 3px 5px;
+    position: relative;
 }
+.box {
+    border: 1px solid rgb(169, 169, 169);
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 3px 3px 5px;
+    padding: 10px;
+    margin: 10px 0;
+    background: white;
+    transition: all 0.3s ease-in-out;
+}
+.historyVideo{
+    position: absolute;
+    right: 0;
+    top: 50px;
+    width: 10vw;
+    height: auto;
+}
+.historyVideo1{
+    width: 10vw;
+    height: auto;
+}
+.flex50{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.featopic {
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px 0.5vw;
+    border-radius: 5px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.3s ease-in-out;
+}
+
+.link{
+    text-decoration: none;
+    color: black;
+}
+
+.feats {
+    font-size: 22px;
+    font-family: "Catamaran", sans-serif;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    max-height: 0;
+    padding-left: 1vw;
+    opacity: 0;
+}
+
+.show {
+    max-height: 200px; /* Adjust height as needed */
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.hide {
+    max-height: 0;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+}
+
 .left{
     width: 50%;
     margin: 50px 0;
@@ -29,6 +97,12 @@
     font-size: 36px;
     font-weight: 400;
     padding: 0 0 80px;
+    position: relative;
+}
+.poem1{
+    font-family: "Playfair Display", serif;
+    font-size: 36px;
+    font-weight: 400;
     position: relative;
 }
 .text{
@@ -98,10 +172,20 @@
     .right{
         margin-top: 0;
     }
+    .historyVideo{
+        top: -20px;
+        right: -20px;
+        width: 30vw;
+    }
+    .historyVideo1{
+        width: 30vw;
+        height: auto;
+    }
 }
 
 .banner{
-    background-color:#abdbff;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
     margin-top: 80px;
     width: 100%;
     height: 300px;
@@ -112,10 +196,12 @@
 }
 .squirrel{
     position: absolute;
-    right: 25vw;
-    bottom: -20px;
-    width: 15vw;
-    height: auto;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
 }
 .content{
     width: 40vw;
@@ -134,11 +220,6 @@
     padding: 0 4%;
     height: 300px;
   }
-  /* Squirrel image: reposition and enlarge proportionally */
-  .squirrel {
-    right: 10%;
-    width: 25%;
-  }
   /* Content inside banner now takes most of available width */
   .content {
     width: 80%;
@@ -148,6 +229,9 @@
   }
   .text {
     font-size: 18px;
+  }
+  .featopic {
+    font-size: 24px;
   }
 }
 

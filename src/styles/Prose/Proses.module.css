@@ -3,6 +3,18 @@
     width: 80vw;
     display: flex;
     gap: 2vw;
+    position: relative;
+}
+.historyVideo{
+    position: absolute;
+    right: 0;
+    top: 50px;
+    width: 10vw;
+    height: auto;
+}
+.historyVideo1{
+    width: 10vw;
+    height: auto;
 }
 .left{
     width: 50%;
@@ -91,10 +103,20 @@
     .right{
         margin-top: 0;
     }
+    .historyVideo{
+        top: -20px;
+        right: -20px;
+        width: 30vw;
+    }
+    .historyVideo1{
+        width: 30vw;
+        height: auto;
+    }
 }
 
 .banner{
-    background-color:#e5caf4;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
     margin-top: 80px;
     width: 100%;
     height: 300px;
@@ -105,13 +127,15 @@
 }
 .squirrel{
     position: absolute;
-    right: 25vw;
-    bottom: -20px;
-    width: 15vw;
-    height: auto;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
 }
 .content{
-    width: 40vw;
+    width: 60vw;
 }
 .heading{
     font-size: 50px;
@@ -120,17 +144,13 @@
 .text{
     font-size: 22px;
 }
+
 @media (max-width: 768px) {
  /* Banner adjusts to full width and smaller side paddings */
  .banner {
     width: 92%;
     padding: 0 4%;
     height: 300px;
-  }
-  /* Squirrel image: reposition and enlarge proportionally */
-  .squirrel {
-    right: 10%;
-    width: 25%;
   }
   /* Content inside banner now takes most of available width */
   .content {

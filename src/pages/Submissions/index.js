@@ -37,10 +37,10 @@ export default function SubmissionsPage() {
       <div className={styles.banner}>
         <Image
           className={styles.squirrel}
-          src={"/About/puppy.png"}
+          src={"/banners/4.jpg"}
           width={400}
           height={400}
-          alt="Banner"
+          alt="image"
         />
         <div className={styles.content}>
           <div className={styles.heading}>Submissions</div>

@@ -8,23 +8,21 @@ import Image from "next/image";
 export default function HowToSubmit() {
   return (
     <div>
-    <div className={styles.banner}>
-    <Image
-      className={styles.squirrel}
-      src={"/About/puppy.png"}
-      width={400}
-      height={400}
-      alt="Banner"
-    />
-    <div className={styles.content}>
-      <div className={styles.heading}>How to Submit Your Work</div>
-      <div className={styles.text}>
-      At Diorama, we invite you to share your creative masterpieces in Poetry,
-      Prose, or Creative Nonfiction. Please review the guidelines below for each
-      category before submitting your work.
+      <div className={styles.banner}>
+        <Image
+          className={styles.squirrel}
+          src={"/banners/6.jpg"}
+          width={400}
+          height={400}
+          alt="image"
+        />
+        <div className={styles.content}>
+          <div className={styles.heading}>How to submit</div>
+          <div className={styles.text}>
+            We help children engage through fun and educational Magazines.
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
     <div className={styles.container}>
 
       {/* Poetry Submission Section */}

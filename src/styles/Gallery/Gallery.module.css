@@ -1,19 +1,22 @@
 .banner{
-    background-color: rgb(255, 222, 171);
-    margin-top: 80px;
-    width: 100%;
-    height: 300px;
-    position: relative;
-    display: flex;
-    align-items: center;
-    padding: 0 8vw;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  margin-top: 80px;
+  width: 100%;
+  height: 300px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0 8vw;
 }
 .squirrel{
-    position: absolute;
-    right: 25vw;
-    bottom: -20px;
-    width: 15vw;
-    height: auto;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
 }
 .content{
     width: 40vw;
@@ -25,17 +28,13 @@
 .text{
     font-size: 22px;
 }
+
 @media (max-width: 768px) {
  /* Banner adjusts to full width and smaller side paddings */
  .banner {
     width: 92%;
     padding: 0 4%;
     height: 300px;
-  }
-  /* Squirrel image: reposition and enlarge proportionally */
-  .squirrel {
-    right: 10%;
-    width: 25%;
   }
   /* Content inside banner now takes most of available width */
   .content {
@@ -51,10 +50,28 @@
 
 /* Container for the masonry grid */
 .container {
-    background-color: rgb(248, 248, 248);
     column-count: 3;
     column-gap: 1rem;
     padding: 50px 10vw;
+  }
+  .bcont{
+    position: relative;
+  }
+  .autoVideo{
+    position: absolute;
+    z-index: 1000;
+    bottom: 500px;
+    right: 2%;
+    width: 5vw;
+    height: auto;
+  }
+  .autoVideo1{
+    position: absolute;
+    z-index: 1000;
+    top: 300px;
+    left: 1.5%;
+    width: 8vw;
+    height: auto;
   }
   
   /* Responsive: reduce columns on smaller screens */
@@ -116,4 +133,3 @@
     text-align: center;
     padding: 0.5rem;
   }
-  

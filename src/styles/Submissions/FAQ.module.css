@@ -1,8 +1,5 @@
 /* Container */
 .container {
-    max-width: 800px;
-    margin: 80px auto 0;
-    padding: 40px 20px;
     font-family: sans-serif;
     color: #333;
   }
@@ -13,12 +10,44 @@
     font-size: 2.5rem;
     margin-bottom: 30px;
   }
+
+  .banner{
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    margin-top: 80px;
+    width: 100%;
+    height: 300px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0 8vw;
+}
+.squirrel{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+.content{
+  width: 60vw;
+}
+.heading{
+  font-size: 50px;
+  font-weight: 900;
+}
+.text{
+  font-size: 22px;
+}
   
   /* FAQ List */
   .faqList {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    padding:120px 10vw 180px;
   }
   
   /* Individual FAQ Item */
@@ -62,6 +91,21 @@
   
   /* Responsive Adjustments */
   @media (max-width: 768px) {
+    .banner {
+      width: 92%;
+      padding: 0 4%;
+      height: 300px;
+    }
+    /* Content inside banner now takes most of available width */
+    .content {
+      width: 80%;
+    }
+    .heading {
+      font-size: 35px;
+    }
+    .text {
+      font-size: 18px;
+    }
     .title {
       font-size: 2rem;
     }

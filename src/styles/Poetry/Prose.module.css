@@ -1,0 +1,51 @@
+.box {
+    border: 1px solid rgb(169, 169, 169);
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 3px 3px 5px;
+    padding: 10px;
+    margin: 10px 0;
+    background: white;
+    transition: all 0.3s ease-in-out;
+}
+.flex50{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.featopic {
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px 0.5vw;
+    border-radius: 5px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.3s ease-in-out;
+}
+
+.link{
+    text-decoration: none;
+    color: black;
+}
+
+.feats {
+    font-size: 22px;
+    font-family: "Catamaran", sans-serif;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    max-height: 0;
+    padding-left: 1vw;
+    opacity: 0;
+}
+
+.show {
+    max-height: 200px; /* Adjust height as needed */
+    opacity: 1;
+}
+
+.hide {
+    max-height: 0;
+    opacity: 0;
+}

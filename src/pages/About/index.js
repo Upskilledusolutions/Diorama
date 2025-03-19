@@ -1,11 +1,13 @@
 "use client";
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import styles from "@/styles/About/about.module.css";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
+import { FaEnvelope, FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
 
 export default function Index() {
   const { scrollYProgress } = useScroll();
+  const videoRef = useRef(null);
   // Snail horizontal movement (to and fro)
   const snailX = useTransform(scrollYProgress, [0, 1], ["40vw", "-10vw"]);
 
@@ -27,13 +29,27 @@ export default function Index() {
   const imageY2 = useTransform(flexProgress2, [0, 1], [0, 50]);
   const contentY2 = useTransform(flexProgress2, [0, 1], [0, -50]);
 
+  // Sync video progress with scroll
+  useEffect(() => {
+    if (!videoRef.current) return;
+
+    const unsubscribe = scrollYProgress.on("change", (latest) => {
+      const video = videoRef.current;
+      if (video && video.readyState >= 2) {
+        video.currentTime = latest * video.duration * 1.5;
+      }
+    });
+
+    return () => unsubscribe();
+  }, [scrollYProgress]);
+
   return (
     <div>
       {/* Banner Section */}
       <div className={styles.banner}>
         <Image
           className={styles.squirrel}
-          src={"/About/squirrel.png"}
+          src={"/banners/1.jpg"}
           width={400}
           height={400}
           alt="image"
@@ -48,6 +64,14 @@ export default function Index() {
 
       {/* History Section */}
       <div className={styles.history}>
+      <motion.video
+          ref={videoRef}
+          className={styles.historyVideo}
+          src="/animations/quil.mp4" // Update with actual video path
+          autoPlay={false}
+          muted
+          playsInline
+        />
         <div className={styles.frame}>
           <Image
             className={styles.top}
@@ -147,6 +171,37 @@ export default function Index() {
             />
           </motion.div>
         </motion.div>
+      </div>
+
+       {/* Contact Us Section */}
+       <div className={styles.contact}>
+        <div className={styles.contactHeading}>Contact Us</div>
+        <div className={styles.contactDetails}>
+          <div className={styles.contactItem}>
+            <FaPhoneAlt className={styles.icon} />
+            <div>
+              <strong>Phone:</strong>
+              <p>+91 98765 43210</p>
+              <p>+91 98765 43211</p>
+            </div>
+          </div>
+          <div className={styles.contactItem}>
+            <FaEnvelope className={styles.icon} />
+            <div>
+              <strong>Email:</strong>
+              <p>contact@diorama.com</p>
+              <p>support@diorama.com</p>
+            </div>
+          </div>
+          <div className={styles.contactItem}>
+            <FaMapMarkerAlt className={styles.icon} />
+            <div>
+              <strong>Address:</strong>
+              <p>123, Creative Lane, Mumbai, India</p>
+              <p>Pin: 400001</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

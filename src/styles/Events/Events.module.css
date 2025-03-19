@@ -1,0 +1,132 @@
+/* Banner Section (existing) */
+.bcont{
+    padding-bottom: 80px;
+}
+.banner {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    margin-top: 80px;
+    width: 100%;
+    height: 300px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0 8vw;
+  }
+  .squirrel {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+  .content {
+    width: 40vw;
+  }
+  .heading {
+    font-size: 50px;
+    font-weight: 900;
+  }
+  .text {
+    font-size: 22px;
+  }
+  @media (max-width: 768px) {
+    .banner {
+      width: 92%;
+      padding: 0 4%;
+      height: 300px;
+    }
+    .content {
+      width: 80%;
+    }
+    .heading {
+      font-size: 35px;
+    }
+    .text {
+      font-size: 18px;
+    }
+  }
+  
+  /* Slider Section Styles */
+  .sliderSection {
+    padding: 2rem 8vw;
+  }
+  .sectionTitle {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 900;
+    text-align: center;
+  }
+  .sliderContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  .arrow {
+    background-color: #333;
+    color: white;
+    border-radius: 40px;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 10px 1vw;
+  }
+  
+  /* Make the viewport responsive */
+  .sliderViewport {
+    width: 80vw; /* full viewport width minus container padding */
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  .sliderTrack {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.5s ease;
+  }
+  
+  /* Responsive card widths */
+  .card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    /* On desktop: 3 cards visible; on mobile: 1 card visible */
+    flex: 0 0 calc(90% / 3);
+    overflow: visible;
+    margin: 10px 0.25%;
+  }
+  @media (max-width: 768px) {
+    .card {
+      flex: 0 0 100%;
+      margin:10px 0;
+    }
+  }
+  
+  .cardImage {
+    width: 100%;
+    height: 200px;
+    position: relative;
+  }
+  .img{
+    object-fit:cover;
+  }
+  .cardContent {
+    padding: 1rem;
+  }
+  .cardTitle {
+    font-size: 1.2rem;
+    margin: 0.25rem 0;
+    color: #333;
+  }
+  .cardDate {
+    font-size: 0.9rem;
+    margin-bottom: 0.25rem;
+    color: #777;
+  }
+  .cardDescription {
+    font-size: 0.95rem;
+    color: #555;
+  }
+  

@@ -8,20 +8,20 @@ export default function PrivacyPolicy() {
     <div className={styles.container}>
       {/* Hero Banner */}
       <div className={styles.banner}>
-    <Image
-      className={styles.squirrel}
-      src={"/Gallery/fox.png"}
-      width={400}
-      height={400}
-      alt="image"
-    />
-    <div className={styles.content1}>
-      <div className={styles.heading}>Privacy Policy</div>
-      <div className={styles.text}>
-        We help children engage through fun and educational Magazines.
+        <Image
+          className={styles.squirrel}
+          src={"/banners/2.jpg"}
+          width={400}
+          height={400}
+          alt="image"
+        />
+        <div className={styles.content}>
+          <div className={styles.heading}>Privacy Policy</div>
+          <div className={styles.text}>
+            We help children engage through fun and educational Magazines.
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
 
       {/* Content Section */}
       <div className={styles.content}>
