@@ -66,7 +66,7 @@ function Testimonials({title}) {
       </div>
       <Slider className={styles.slider} {...settings}>
 
-        {Poemdata.splice(0,8).map(data=><div className={styles.cardcontainer}>
+        {Poemdata.splice(0,8).map(data=><div key={data.poemid} className={styles.cardcontainer}>
         <div className={styles.cardcnf}>
           <div className={styles.imgcontainer}>
             <div className={styles.img}>
