@@ -1,41 +1,99 @@
-import Poem from '@/Components/Prose/Prose'
-import React, { useEffect, useRef } from 'react'
-import styles from '@/styles/Prose/Proses.module.css'
+import Poem from '@/Components/Poetry/Poem'
+import Quotes from '@/Components/Poetry/Quotes'
+import React, { useEffect, useRef, useState } from 'react'
+import styles from '@/styles/Poetry/Poetry.module.css'
 import FadeInSection from '@/Components/Poetry/FadeInSection';
-import Image from 'next/image';
-import Others from '@/Components/Prose/Others';
 import { motion, useScroll } from "framer-motion";
+import Image from 'next/image';
+import NewSlider from '@/Components/Poetry/NewSlider'
+import NewSliderCnf from '@/Components/Poetry/NewSliderCnf'
+import Others from '@/Components/Poetry/Others';
 
 const Poemdata = [
-    {
-      "poemid": "1",
-      "title": "Prose Piece 1",
-      "poem": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, nisi vel consectetur consequat, nisl nisi dictum sapien, sed scelerisque felis sapien sit amet nunc. <br/> Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam."
-    },
-    {
-      "poemid": "2",
-      "title": "Prose Piece 2",
-      "poem": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident. <br/> Similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga."
-    },
-    {
-      "poemid": "3",
-      "title": "Prose Piece 3",
-      "poem": "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, <br/> sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem."
-    }
-  ];
-  
-
-const Quotesdata = [
-    { "quoteid": "1",
-    "quote": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."},
-    { "quoteid": "2",
-        "quote": "Dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."}
-]
+  {
+    "poemid": "1",
+    "title": "Prose Piece 1",
+    "poem": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, nisi vel consectetur consequat, nisl nisi dictum sapien, sed scelerisque felis sapien sit amet nunc. <br/> Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam."
+  },
+  {
+    "poemid": "2",
+    "title": "Prose Piece 2",
+    "poem": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident. <br/> Similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga."
+  },
+  {
+    "poemid": "3",
+    "title": "Prose Piece 3",
+    "poem": "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, <br/> sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem."
+  },
+  {
+    "poemid": "4",
+    "title": "Prose Piece 4",
+    "poem": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, nisi vel consectetur consequat, nisl nisi dictum sapien, sed scelerisque felis sapien sit amet nunc. <br/> Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam."
+  },
+  {
+    "poemid": "5",
+    "title": "Prose Piece 5",
+    "poem": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident. <br/> Similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga."
+  },
+  {
+    "poemid": "6",
+    "title": "Prose Piece 6",
+    "poem": "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, <br/> sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem."
+  },
+  {
+    "poemid": "7",
+    "title": "Prose Piece 7",
+    "poem": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, nisi vel consectetur consequat, nisl nisi dictum sapien, sed scelerisque felis sapien sit amet nunc. <br/> Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam."
+  },
+  {
+    "poemid": "8",
+    "title": "Prose Piece 8",
+    "poem": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident. <br/> Similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga."
+  },
+  {
+    "poemid": "9",
+    "title": "Prose Piece 9",
+    "poem": "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, <br/> sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem."
+  },
+  {
+    "poemid": "10",
+    "title": "Prose Piece 10",
+    "poem": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, nisi vel consectetur consequat, nisl nisi dictum sapien, sed scelerisque felis sapien sit amet nunc. <br/> Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam."
+  },
+  {
+    "poemid": "11",
+    "title": "Prose Piece 11",
+    "poem": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident. <br/> Similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga."
+  },
+  {
+    "poemid": "12",
+    "title": "Prose Piece 12",
+    "poem": "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, <br/> sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem."
+  },
+];
 
 export default function Index() {
- // Global scroll for the poet video
+  // Global scroll for the poet video
   const { scrollYProgress } = useScroll();
   const poetVideoRef = useRef(null);
+  const itemsPerPage = 5;
+  const totalPages = Math.ceil(Poemdata.length / itemsPerPage);
+  const [page, setPage] = useState(0);
+
+  // Slice out the current page's items
+  const currentItems = Poemdata.slice(page * itemsPerPage, (page + 1) * itemsPerPage);
+
+  const handlePrev = () => {
+    setPage((prev) => (prev - 1 + totalPages) % totalPages);
+  };
+
+  const handleNext = () => {
+    setPage((prev) => (prev + 1) % totalPages);
+  };
+
+  const handlePageClick = (pageIndex) => {
+    setPage(pageIndex);
+  };
 
   // Writing video in the left column
   const writingContainerRef1 = useRef(null);
@@ -82,12 +140,20 @@ export default function Index() {
     });
     return () => unsubscribeWriting2();
   }, [writingScrollProgress2]);
+
   return (
     <div>
       <div className={styles.banner}>
         <Image
           className={styles.squirrel}
-          src={"/banners/11.jpg"}
+          src={"/banners/10.jpg"}
+          width={400}
+          height={400}
+          alt="image"
+        />
+        <Image
+          className={styles.white}
+          src={"/Home/hero10.png"}
           width={400}
           height={400}
           alt="image"
@@ -99,68 +165,52 @@ export default function Index() {
           </div>
         </div>
       </div>
-    <div className={styles.container}>
-    <motion.video
-          ref={poetVideoRef}
-          className={styles.historyVideo}
-          src="/animations/poet.mp4" // Update with actual video path
-          autoPlay={false}
-          muted
-          playsInline
-        />
-        <div className={styles.left}>
-            <FadeInSection >
-            <Poem Poemdata={Poemdata[0]}/>
-            </FadeInSection >
-            {/* {/* <FadeInSection >
-            <Quotes Quotesdata={Quotesdata[0]}/>
-            </FadeInSection> */}
-             <div ref={writingContainerRef1}>
-            <motion.video
-              ref={writingVideoRef1}
-              className={styles.historyVideo1}
-              src="/animations/writing.mp4" // Update with actual video path
-              autoPlay={false}
-              muted
-              playsInline
-            />
+
+<div className={styles.animatedVideoContainer}>
+  <motion.video
+    src="/Home/toad.mp4"  // Update with your actual video path
+    autoPlay
+    loop
+    muted
+    playsInline
+    className={styles.frog}
+  />
+  <div className={styles.containercon}>
+    <div className={styles.quotetext}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+    <div className={styles.quoteauthor}>- Lorem ipsum</div>
+  </div>
+</div>
+
+<div>
+<div className={styles.pages}>
+        {currentItems.map((item, index) => (
+          <div key={item.poemid} className={styles.box1}>
+            {/* First card of the page is rendered big */}
+            <Poem Poemdata={item} big={index === 0} />
           </div>
-            <FadeInSection >
-            <Others />
-            </FadeInSection >
-            <FadeInSection >
-            <Poem Poemdata={Poemdata[1]}/>
-            </FadeInSection >
-            <FadeInSection >
-            <Poem Poemdata={Poemdata[0]}/>
-            </FadeInSection >
-        </div>
-        <div className={styles.right}>
-        <FadeInSection >
-            <Poem Poemdata={Poemdata[1]}/>
-            </FadeInSection >
-            <FadeInSection >
-            <Poem Poemdata={Poemdata[2]}/>
-            </FadeInSection >
-                      {/* Right column Writing Video */}
-          <div ref={writingContainerRef2}>
-            <motion.video
-              ref={writingVideoRef2}
-              className={styles.historyVideo1}
-              src="/animations/writing2.mp4" // Update with actual video path
-              autoPlay={false}
-              muted
-              playsInline
-            />
-          </div>
-            {/* <FadeInSection >
-            <Quotes Quotesdata={Quotesdata[0]}/>
-            </FadeInSection > */}
-            <FadeInSection >
-            <Poem Poemdata={Poemdata[2]}/>
-            </FadeInSection >
-        </div>
+        ))}
+      </div>
+      <div className={styles.paginationControls}>
+        <button className={styles.prevButton} onClick={handlePrev}>Prev</button>
+        {Array.from({ length: totalPages }).map((_, i) => (
+          <button
+            key={i}
+            className={`${styles.pageButton} ${page === i ? styles.activePageButton : ''}`}
+            onClick={() => handlePageClick(i)}
+          >
+            {i + 1}
+          </button>
+        ))}
+        <button className={styles.nextButton} onClick={handleNext}>Next</button>
+      </div>
+
+  <div className={styles.marginbtm}>
+    <NewSlider titlehead={'Prose'} title={'Emerging Prose'} slider={3}/>
+    <NewSlider titlehead={'Prose'} title={'Recent Prose'} slider={3}/>
+
+  </div>
+</div>
+
     </div>
-    </div>
-  )
+  );
 }

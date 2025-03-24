@@ -5,6 +5,8 @@ import styles from '@/styles/Poetry/Poetry.module.css'
 import FadeInSection from '@/Components/Poetry/FadeInSection';
 import { motion, useScroll } from "framer-motion";
 import Image from 'next/image';
+import NewSlider from '@/Components/Poetry/NewSlider'
+import NewSliderCnf from '@/Components/Poetry/NewSliderCnf'
 import Others from '@/Components/Poetry/Others';
 
 const Poemdata = [
@@ -97,6 +99,13 @@ export default function Index() {
           height={400}
           alt="image"
         />
+        <Image
+          className={styles.white}
+          src={"/Home/hero10.png"}
+          width={400}
+          height={400}
+          alt="image"
+        />
         <div className={styles.content}>
           <div className={styles.heading}>Poetry</div>
           <div className={styles.text}>
@@ -104,73 +113,68 @@ export default function Index() {
           </div>
         </div>
       </div>
-      <div className={styles.container}>
-        {/* Poet Video */}
-        <motion.video
-          ref={poetVideoRef}
-          className={styles.historyVideo}
-          src="/animations/poet.mp4" // Update with actual video path
-          autoPlay={false}
-          muted
-          playsInline
-        />
-        <div className={styles.left}>
-          <FadeInSection>
-            <Quotes Quotesdata={Quotesdata[0]} />
-          </FadeInSection>
-          <FadeInSection>
-            <Poem Poemdata={Poemdata[0]} />
-          </FadeInSection>
-          <FadeInSection>
-            <Quotes Quotesdata={Quotesdata[1]} />
-          </FadeInSection>
-          {/* Left column Writing Video */}
-          <div ref={writingContainerRef1}>
-            <motion.video
-              ref={writingVideoRef1}
-              className={styles.historyVideo1}
-              src="/animations/writing.mp4" // Update with actual video path
-              autoPlay={false}
-              muted
-              playsInline
-            />
-          </div>
-          <FadeInSection>
-            <Poem Poemdata={Poemdata[1]} />
-          </FadeInSection>
-          <FadeInSection>
-            <Poem Poemdata={Poemdata[0]} />
-          </FadeInSection>
-        </div>
-        <div className={styles.right}>
-          <FadeInSection>
-            <Poem Poemdata={Poemdata[1]} />
-          </FadeInSection>
-          {/* Right column Writing Video */}
-          <div ref={writingContainerRef2}>
-            <motion.video
-              ref={writingVideoRef2}
-              className={styles.historyVideo1}
-              src="/animations/writing2.mp4" // Update with actual video path
-              autoPlay={false}
-              muted
-              playsInline
-            />
-          </div>
-          <FadeInSection>
-            <Others />
-          </FadeInSection>
-          <FadeInSection>
-            <Poem Poemdata={Poemdata[2]} />
-          </FadeInSection>
-          <FadeInSection>
-            <Quotes Quotesdata={Quotesdata[0]} />
-          </FadeInSection>
-          <FadeInSection>
-            <Poem Poemdata={Poemdata[2]} />
-          </FadeInSection>
-        </div>
-      </div>
+
+<div className={styles.animatedVideoContainer}>
+  <motion.video
+    src="/Home/toad.mp4"  // Update with your actual video path
+    autoPlay
+    loop
+    muted
+    playsInline
+    className={styles.frog}
+  />
+  <div className={styles.containercon}>
+    <div className={styles.quotetext}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+    <div className={styles.quoteauthor}>- Lorem ipsum</div>
+  </div>
+</div>
+
+<div>
+  <div className={styles.heading1}>Featured Poetry</div>
+  <div>
+  <FadeInSection>
+    <Poem Poemdata={Poemdata[0]} big={true}/>
+  </FadeInSection>
+  <FadeInSection>
+    <Poem Poemdata={Poemdata[1]} big={false}/>
+  </FadeInSection>
+  <FadeInSection>
+    <Poem Poemdata={Poemdata[2]} big={false}/>
+  </FadeInSection>
+  </div>
+
+  <div className={styles.heading1}>Emerging Poetry</div>
+  <div>
+  <FadeInSection>
+    <Poem Poemdata={Poemdata[0]} big={true}/>
+  </FadeInSection>
+  <FadeInSection>
+    <Poem Poemdata={Poemdata[1]} big={false}/>
+  </FadeInSection>
+  <FadeInSection>
+    <Poem Poemdata={Poemdata[2]} big={false}/>
+  </FadeInSection>
+  </div>
+
+  <div className={styles.heading1}>Recent Poetry</div>
+  <div>
+  <FadeInSection>
+    <Poem Poemdata={Poemdata[0]} big={true}/>
+  </FadeInSection>
+  <FadeInSection>
+    <Poem Poemdata={Poemdata[1]} big={false}/>
+  </FadeInSection>
+  <FadeInSection>
+    <Poem Poemdata={Poemdata[2]} big={false}/>
+  </FadeInSection>
+  </div>
+
+  <div className={styles.marginbtm}>
+    <NewSlider titlehead={'Prose'} title={'Prose'} slider={3}/>
+    <NewSliderCnf titlehead={'Cnf'} title={'Creative Non-Fiction'} slider={2}/>
+  </div>
+</div>
+
     </div>
   );
 }

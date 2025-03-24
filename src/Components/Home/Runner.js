@@ -22,7 +22,7 @@ export default function Runner() {
 
       {/* Snail Image - Moves Right to Left (Slower) */}
       <motion.div style={{ x: snailX }} className={styles.snail}>
-        <Image src={"/Home/snail.svg"} height={400} width={400} alt="Snail" />
+        <Image src={"/Home/snail.svg"} className={styles.snail1} height={400} width={400} alt="Snail" />
       </motion.div>
 
       {/* Path and Tree - Static */}

@@ -31,14 +31,25 @@ export default function Hero() {
     <div className={styles.hero}>
       <Image
         className={styles.hero1}
-        src={"/Home/Hero.jpg"}
+        src={"/Home/hero01.jpg"}
         width={1000}
         height={1000}
         alt="hero"
       />
       <Image
+        className={styles.hero02}
+        src={"/Home/hero10.png"}
+        width={1000}
+        height={1000}
+        alt="hero"
+      />
+      <div className={styles.text}>
+        <div>Some heading goes here</div>
+        <div>Some text goes here</div>
+      </div>
+      <Image
         className={styles.hero2}
-        src={"/Home/Hero2.jpg"}
+        src={"/Home/birdimg.png"}
         width={300}
         height={300}
         alt="hero"

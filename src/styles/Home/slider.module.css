@@ -1,0 +1,223 @@
+.slidercontainer{
+    padding: 50px 0vw;
+    margin-left: 0vw;
+    position: relative;
+    background-color: var(--blue);
+  }
+  .background{
+    position: absolute;
+    top: 0;
+    left: 0vw;
+    width: 100vw;
+    height: 750px;
+    z-index: -10;
+    object-fit: cover;
+  }
+  .icon{
+    width: 20px;
+    height: 20px;
+    padding: 10px;
+    border-radius: 20px;
+    color: white;
+    background-color: black;
+  }
+  .heading{
+    width: 98vw;
+    font-size: 30px;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  .heading1{
+    padding-bottom: 10px;
+    border-bottom:3px solid white;
+    display: inline;
+    font-size: 50px;
+  }
+  .imgcontainer{
+    display: flex;
+    gap: 10px;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  .card{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: left;
+    text-align: left;
+    width: 20vw;
+    background: white;
+    font-weight: 500;
+    margin-left: 4vw;
+    padding: 20px 2vw;
+    border: 1px solid rgb(182, 182, 182);
+    box-shadow: rgba(0, 0, 0, 0.25) 3px 3px 5px;
+    border-radius: 10px;
+    height: 350px;
+    margin-bottom: 20px;
+  }
+  .cardcnf{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: left;
+    text-align: left;
+    width: 35vw;
+    background: white;
+    font-weight: 500;
+    margin-left: 4vw;
+    padding: 20px 2vw;
+    border: 1px solid rgb(182, 182, 182);
+    border-radius: 10px;
+    height: 280px;
+  }
+  .img{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+  border-radius: 100%;
+  }
+  .name{
+    font-size: 24px;
+    font-weight: 900;
+  }
+  .boldtext{
+    font-weight: 600;
+    font-size: 12px;
+    margin-bottom: 20px;
+  }
+  .description{
+    font-size: 18px;
+  }
+  .slider{
+    padding-left: 1vw;
+  }
+  .flex6{
+    display: flex;
+    font-size:20px;
+    gap: 20px;
+}
+/* Icon Wrapper for toggling between outline and solid icons */
+.iconWrapper {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  margin: 15px 0;
+}
+
+.outlineIcon,
+.solidIcon {
+  transition: opacity 0.3s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.solidIcon {
+  opacity: 0;
+}
+
+.iconWrapper:hover .solidIcon {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.iconWrapper:hover .outlineIcon {
+  opacity: 0;
+}
+
+.text1{
+  font-family: "Catamaran", sans-serif;
+  font-size: 18px;
+  margin: 20px 0 0;
+}
+.text1 {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+  text-decoration: none;
+  font-weight: 900;
+  padding-bottom: 4px; /* Space for the underline */
+}
+
+.text1::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #00eaff; /* Change to your preferred color */
+  transition: width 0.3s ease-in-out;
+}
+
+.text1:hover::after {
+  width: 100%;
+}
+
+  @media screen and (max-width: 720px){
+    .background, .cover{
+      height: 600px;
+    }
+    .slidercontainer{
+      padding: 20px 2vw;
+      overflow: hidden;
+    }
+    .slider{
+      width: 96vw;
+    }
+    .card{
+      padding: 20px 3vw 20px 3vw;
+      width: 86vw;
+      height: 300px;
+      margin: 0;
+    }
+    .heading{
+      font-size: 30px;
+      padding-top: 10px;
+      text-align: center;
+      width: 95vw;
+      margin-bottom: 60px;
+    }
+    .img{
+      width: 30px;
+      height: 30px;
+    }
+    .name{
+      font-size: 22px;
+    }
+    .boldtext{
+      margin-top: 5px;
+      font-size: 14px;
+    }
+    .imgcontainer{
+      gap: 20px;
+    }
+    .description,.imgcontainer{
+      font-size: 14px;
+      padding: 0;
+    }
+    .heading1{
+      font-size: 32px;
+      padding-bottom: 0;
+    }
+    .heading{
+      margin-bottom: 20px;
+    }
+    .card{
+      padding: 20px 5vw;
+      width: 80vw;
+      height: 270px;
+    }
+    .cardcnf{
+      margin: 0;
+      padding: 20px 5vw;
+      width: 80vw;
+      height: 270px;
+    }
+
+  }

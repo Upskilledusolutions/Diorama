@@ -1,39 +1,45 @@
-import Poem from '@/Components/Prose/Prose'
+import Poem from '@/Components/Poetry/Poem'
+import Quotes from '@/Components/Poetry/Quotes'
 import React, { useEffect, useRef } from 'react'
-import styles from '@/styles/Prose/Proses.module.css'
+import styles from '@/styles/Poetry/Poetry.module.css'
 import FadeInSection from '@/Components/Poetry/FadeInSection';
-import Image from 'next/image';
-import Others from '@/Components/Prose/Others';
 import { motion, useScroll } from "framer-motion";
+import Image from 'next/image';
+import NewSlider from '@/Components/Poetry/NewSliderPoetry'
+import NewSliderCnf from '@/Components/Poetry/NewSliderCnf'
+import Others from '@/Components/Poetry/Others';
 
 const Poemdata = [
-    {
-      "poemid": "1",
-      "title": "Prose Piece 1",
-      "poem": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, nisi vel consectetur consequat, nisl nisi dictum sapien, sed scelerisque felis sapien sit amet nunc. <br/> Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam."
-    },
-    {
-      "poemid": "2",
-      "title": "Prose Piece 2",
-      "poem": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident. <br/> Similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga."
-    },
-    {
-      "poemid": "3",
-      "title": "Prose Piece 3",
-      "poem": "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, <br/> sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem."
-    }
-  ];
-  
+  {
+    "poemid": "1",
+    "title": "Prose Piece 1",
+    "poem": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, nisi vel consectetur consequat, nisl nisi dictum sapien, sed scelerisque felis sapien sit amet nunc. <br/> Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam."
+  },
+  {
+    "poemid": "2",
+    "title": "Prose Piece 2",
+    "poem": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident. <br/> Similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga."
+  },
+  {
+    "poemid": "3",
+    "title": "Prose Piece 3",
+    "poem": "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, <br/> sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem."
+  }
+];
 
 const Quotesdata = [
-    { "quoteid": "1",
-    "quote": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."},
-    { "quoteid": "2",
-        "quote": "Dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."}
-]
+  {
+    "quoteid": "1",
+    "quote": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+  },
+  {
+    "quoteid": "2",
+    "quote": "Dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+  }
+];
 
 export default function Index() {
- // Global scroll for the poet video
+  // Global scroll for the poet video
   const { scrollYProgress } = useScroll();
   const poetVideoRef = useRef(null);
 
@@ -82,12 +88,20 @@ export default function Index() {
     });
     return () => unsubscribeWriting2();
   }, [writingScrollProgress2]);
+
   return (
     <div>
       <div className={styles.banner}>
         <Image
           className={styles.squirrel}
-          src={"/banners/11.jpg"}
+          src={"/banners/10.jpg"}
+          width={400}
+          height={400}
+          alt="image"
+        />
+        <Image
+          className={styles.white}
+          src={"/Home/hero10.png"}
           width={400}
           height={400}
           alt="image"
@@ -99,68 +113,68 @@ export default function Index() {
           </div>
         </div>
       </div>
-    <div className={styles.container}>
-    <motion.video
-          ref={poetVideoRef}
-          className={styles.historyVideo}
-          src="/animations/poet.mp4" // Update with actual video path
-          autoPlay={false}
-          muted
-          playsInline
-        />
-        <div className={styles.left}>
-            <FadeInSection >
-            <Poem Poemdata={Poemdata[0]}/>
-            </FadeInSection >
-            {/* {/* <FadeInSection >
-            <Quotes Quotesdata={Quotesdata[0]}/>
-            </FadeInSection> */}
-             <div ref={writingContainerRef1}>
-            <motion.video
-              ref={writingVideoRef1}
-              className={styles.historyVideo1}
-              src="/animations/writing.mp4" // Update with actual video path
-              autoPlay={false}
-              muted
-              playsInline
-            />
-          </div>
-            <FadeInSection >
-            <Others />
-            </FadeInSection >
-            <FadeInSection >
-            <Poem Poemdata={Poemdata[1]}/>
-            </FadeInSection >
-            <FadeInSection >
-            <Poem Poemdata={Poemdata[0]}/>
-            </FadeInSection >
-        </div>
-        <div className={styles.right}>
-        <FadeInSection >
-            <Poem Poemdata={Poemdata[1]}/>
-            </FadeInSection >
-            <FadeInSection >
-            <Poem Poemdata={Poemdata[2]}/>
-            </FadeInSection >
-                      {/* Right column Writing Video */}
-          <div ref={writingContainerRef2}>
-            <motion.video
-              ref={writingVideoRef2}
-              className={styles.historyVideo1}
-              src="/animations/writing2.mp4" // Update with actual video path
-              autoPlay={false}
-              muted
-              playsInline
-            />
-          </div>
-            {/* <FadeInSection >
-            <Quotes Quotesdata={Quotesdata[0]}/>
-            </FadeInSection > */}
-            <FadeInSection >
-            <Poem Poemdata={Poemdata[2]}/>
-            </FadeInSection >
-        </div>
+
+<div className={styles.animatedVideoContainer}>
+  <motion.video
+    src="/Home/toad.mp4"  // Update with your actual video path
+    autoPlay
+    loop
+    muted
+    playsInline
+    className={styles.frog}
+  />
+  <div className={styles.containercon}>
+    <div className={styles.quotetext}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+    <div className={styles.quoteauthor}>- Lorem ipsum</div>
+  </div>
+</div>
+
+<div>
+  <div className={styles.heading1}>Featured Prose</div>
+  <div>
+  <FadeInSection>
+    <Poem Poemdata={Poemdata[0]} big={true}/>
+  </FadeInSection>
+  <FadeInSection>
+    <Poem Poemdata={Poemdata[1]} big={false}/>
+  </FadeInSection>
+  <FadeInSection>
+    <Poem Poemdata={Poemdata[2]} big={false}/>
+  </FadeInSection>
+  </div>
+
+  <div className={styles.heading1}>Emerging Prose</div>
+  <div>
+  <FadeInSection>
+    <Poem Poemdata={Poemdata[0]} big={true}/>
+  </FadeInSection>
+  <FadeInSection>
+    <Poem Poemdata={Poemdata[1]} big={false}/>
+  </FadeInSection>
+  <FadeInSection>
+    <Poem Poemdata={Poemdata[2]} big={false}/>
+  </FadeInSection>
+  </div>
+
+  <div className={styles.heading1}>Recent Prose</div>
+  <div>
+  <FadeInSection>
+    <Poem Poemdata={Poemdata[0]} big={true}/>
+  </FadeInSection>
+  <FadeInSection>
+    <Poem Poemdata={Poemdata[1]} big={false}/>
+  </FadeInSection>
+  <FadeInSection>
+    <Poem Poemdata={Poemdata[2]} big={false}/>
+  </FadeInSection>
+  </div>
+
+  <div className={styles.marginbtm}>
+    <NewSlider title={'Poetry'}/>
+    <NewSliderCnf title={'Creative Non-Fiction'}/>
+  </div>
+</div>
+
     </div>
-    </div>
-  )
+  );
 }

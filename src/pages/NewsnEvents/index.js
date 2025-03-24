@@ -195,13 +195,20 @@ export default function EventsPage() {
       <div className={styles.banner}>
         <Image
           className={styles.squirrel}
-          src={"/banners/19.jpg"}
+          src={"/banners/10.jpg"}
           width={400}
           height={400}
-          alt="Banner"
+          alt="image"
+        />
+        <Image
+          className={styles.white}
+          src={"/Home/hero10.png"}
+          width={400}
+          height={400}
+          alt="image"
         />
         <div className={styles.content}>
-          <div className={styles.heading}>News</div>
+          <div className={styles.heading}>News & Events</div>
           <div className={styles.text}>
             We help children engage through fun and educational Magazines.
           </div>
@@ -212,10 +219,10 @@ export default function EventsPage() {
       <EventSlider events={sampleRecentEvents} sectionTitle="Recent News" />
 
       {/* Upcoming Events Section */}
-      <EventSlider events={sampleUpcomingEvents} sectionTitle="Upcoming News" />
+      <EventSlider events={sampleUpcomingEvents} sectionTitle="Upcoming Events" />
 
       {/* Event Highlights Section */}
-      <EventSlider events={sampleHighlights} sectionTitle="News Highlights" />
+      <EventSlider events={sampleHighlights} sectionTitle="Event Highlights" />
     </div>
   );
 }

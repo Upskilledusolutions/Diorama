@@ -46,8 +46,6 @@ export default function Testimonials() {
     <div ref={ref} className={styles.container}>
       <div className={styles.left}>
         <div className={styles.frame}>
-          <Image className={styles.top} src={"/Home/tvtop.svg"} width={400} height={400} alt="tvtop" />
-
           {/* Image Slider */}
           <div className={styles.slider}>
             {testimonials.map((testimonial, index) => (
@@ -62,7 +60,7 @@ export default function Testimonials() {
             ))}
           </div>
 
-          <Image className={styles.bottom} src={"/Home/tvbottom.svg"} width={400} height={400} alt="tvbottom" />
+          <Image className={styles.tv} src={"/Home/tv.png"} width={400} height={400} alt="tvbottom" ></Image>
         </div>
       </div>
       <div className={styles.textSection}>

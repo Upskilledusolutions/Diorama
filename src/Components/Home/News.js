@@ -34,7 +34,7 @@ export default function News() {
 
   return (
     <div ref={ref} className={styles.container}>
-      <Image className={styles.imgbg} src={'/Home/jungle.png'} width={1000} height={1000} alt="jungle" />
+      <Image className={styles.imgbg} src={'/Home/jungle1.jpg'} width={1000} height={1000} alt="jungle" />
       <h2 className={styles.title}>Exciting Events for Young Explorers!</h2>
 
       <div className={styles.cards}>

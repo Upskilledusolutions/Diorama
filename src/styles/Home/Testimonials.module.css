@@ -3,7 +3,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 60px 20px;
+    padding: 60px 20px 180px;
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -26,9 +26,7 @@
     position: relative;
     width: 27vw;
     height: 250px;
-    padding: 20px;
     border-radius: 20px;
-    background-color: #0A303A;
     margin-top: 100px;
 }
 
@@ -43,12 +41,13 @@
 .img {
     position: absolute;
     width: 90%;
-    height: 90%;
-    top: 5%;
-    left: 5%;
+    height: 208px;
+    top: 0;
+    left: 0;
     object-fit: cover;
-    border-radius: 10px;
     transition: opacity 1s ease-in-out;
+    z-index: 2;
+    padding: 8px 21px;
 }
 
 /* Show only active image */
@@ -61,18 +60,11 @@
 }
 
 /* TV Top and Bottom */
-.top {
+.tv {
     position: absolute;
-    top: -128px;
+    top: 0;
     width: auto;
-    height: 130px;
-}
-
-.bottom {
-    position: absolute;
-    bottom: -78px;
-    height: 80px;
-    width: auto;
+    height: 250px;
 }
 
 /* Text Section */
@@ -119,7 +111,7 @@
 /* Sliding "last" Image (Controlled by Scroll) */
 .lastWrapper {
     position: absolute;
-    bottom: 0px;
+    bottom: 60px;
     right: 100px;
     width: 250px;
 }
@@ -155,5 +147,8 @@
     }
     .lastWrapper {
         display: none;
+    }
+    .slider{
+        width: 100vw;
     }
 }

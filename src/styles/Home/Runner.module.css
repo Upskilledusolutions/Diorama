@@ -1,13 +1,13 @@
 .container {
     position: relative;
-    height: 900px;
+    height: 700px;
     overflow: hidden;
 }
 
 /* Runner Image */
 .runner {
     position: absolute;
-    top: 170px;
+    top: 100px;
     width: 400px;
 }
 
@@ -37,7 +37,7 @@
 .content {
     margin-left: 40vw;
     width: 45vw;
-    padding-top: 150px;
+    padding-top: 100px;
 }
 
 .title {
@@ -85,7 +85,7 @@
     }
     .runner{
         position: absolute;
-        top: 550px;
+        top: 500px;
     }
     .runnerimg {
         width: 100px;
@@ -93,5 +93,11 @@
     }
     .img3 {
         width: 20vw;
+    }
+    .img2 {
+        bottom: -200px;
+    }
+    .snail1{
+        width: 50vw;
     }
 }

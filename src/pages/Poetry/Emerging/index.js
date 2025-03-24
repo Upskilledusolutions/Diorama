@@ -1,27 +1,64 @@
 import Poem from '@/Components/Poetry/Poem'
 import Quotes from '@/Components/Poetry/Quotes'
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import styles from '@/styles/Poetry/Poetry.module.css'
 import FadeInSection from '@/Components/Poetry/FadeInSection';
 import { motion, useScroll } from "framer-motion";
 import Image from 'next/image';
+import NewSlider from '@/Components/Poetry/NewSlider'
+import NewSliderCnf from '@/Components/Poetry/NewSliderCnf'
 import Others from '@/Components/Poetry/Others';
 
 const Poemdata = [
   {
-    "poemid": "1",
-    "title": "Poem 1",
-    "poem": "Lorem ipsum dolor sit amet, consectetur adipiscing elit <br/> sed do eiusmod tempor incididunt ut <br/> labore et dolore magna aliqua. Ut enim ad minim veniam, <br/> quis nostrud exercitation ullamco laboris nisi ut aliquip <br/> ex ea commodo consequat. <br/> Duis aute irure dolor in reprehenderit <br/> in voluptate velit esse cillum dolore <br/> eu fugiat nulla pariatur."
+    poemid: "1",
+    title: "Poem 1",
+    poem: "Lorem ipsum dolor sit amet, consectetur adipiscing elit <br/> sed do eiusmod tempor incididunt ut <br/> labore et dolore magna aliqua."
   },
   {
-    "poemid": "2",
-    "title": "Poem 2",
-    "poem": "Lorem ipsum dolor sit amet, <br/> consectetur adipiscing elit sed do <br/> eiusmod tempor incididunt ut <br/> labore et dolore magna aliqua. <br/> Ut enim ad minim veniam, <br/> quis nostrud exercitation ullamco <br/> laboris nisi ut aliquip <br/> ex ea commodo consequat. <br/> Duis aute irure dolor in reprehenderit <br/> in voluptate velit esse cillum dolore <br/> eu fugiat nulla pariatur."
+    poemid: "2",
+    title: "Poem 2",
+    poem: "Lorem ipsum dolor sit amet, consectetur adipiscing elit <br/> sed do eiusmod tempor incididunt ut <br/> labore et dolore magna aliqua."
   },
   {
-    "poemid": "3",
-    "title": "Poem 3",
-    "poem": "Lorem ipsum dolor sit amet, <br/> consectetur adipiscing elit <br/> sed do eiusmod tempor incididunt ut <br/> labore et dolore magna aliqua. Ut enim ad minim veniam, <br/> quis nostrud exercitation ullamco laboris nisi ut aliquip <br/> ex ea commodo consequat. <br/> Duis aute irure <br/> dolor in reprehenderit <br/> in voluptate velit esse <br/> cillum dolore <br/> eu fugiat nulla pariatur."
+    poemid: "3",
+    title: "Poem 3",
+    poem: "Lorem ipsum dolor sit amet, consectetur adipiscing elit <br/> sed do eiusmod tempor incididunt ut <br/> labore et dolore magna aliqua."
+  },
+  {
+    poemid: "4",
+    title: "Poem 4",
+    poem: "Lorem ipsum dolor sit amet, consectetur adipiscing elit <br/> sed do eiusmod tempor incididunt ut <br/> labore et dolore magna aliqua."
+  },
+  {
+    poemid: "5",
+    title: "Poem 5",
+    poem: "Lorem ipsum dolor sit amet, consectetur adipiscing elit <br/> sed do eiusmod tempor incididunt ut <br/> labore et dolore magna aliqua."
+  },
+  {
+    poemid: "6",
+    title: "Poem 6",
+    poem: "Lorem ipsum dolor sit amet, consectetur adipiscing elit <br/> sed do eiusmod tempor incididunt ut <br/> labore et dolore magna aliqua."
+  },
+  {
+    poemid: "7",
+    title: "Poem 7",
+    poem: "Lorem ipsum dolor sit amet, consectetur adipiscing elit <br/> sed do eiusmod tempor incididunt ut <br/> labore et dolore magna aliqua."
+  },
+  {
+    poemid: "8",
+    title: "Poem 8",
+    poem: "Lorem ipsum dolor sit amet, consectetur adipiscing elit <br/> sed do eiusmod tempor incididunt ut <br/> labore et dolore magna aliqua."
+  },
+  {
+    poemid: "9",
+    title: "Poem 9",
+    poem: "Lorem ipsum dolor sit amet, consectetur adipiscing elit <br/> sed do eiusmod tempor incididunt ut <br/> labore et dolore magna aliqua."
+  },
+  {
+    poemid: "10",
+    title: "Poem 10",
+    poem: "Lorem ipsum dolor sit amet, consectetur adipiscing elit <br/> sed do eiusmod tempor incididunt ut <br/> labore et dolore magna aliqua."
   }
 ];
 
@@ -40,6 +77,24 @@ export default function Index() {
   // Global scroll for the poet video
   const { scrollYProgress } = useScroll();
   const poetVideoRef = useRef(null);
+  const itemsPerPage = 5;
+  const totalPages = Math.ceil(Poemdata.length / itemsPerPage);
+  const [page, setPage] = useState(0);
+
+  // Slice out the current page's items
+  const currentItems = Poemdata.slice(page * itemsPerPage, (page + 1) * itemsPerPage);
+
+  const handlePrev = () => {
+    setPage((prev) => (prev - 1 + totalPages) % totalPages);
+  };
+
+  const handleNext = () => {
+    setPage((prev) => (prev + 1) % totalPages);
+  };
+
+  const handlePageClick = (pageIndex) => {
+    setPage(pageIndex);
+  };
 
   // Writing video in the left column
   const writingContainerRef1 = useRef(null);
@@ -97,6 +152,13 @@ export default function Index() {
           height={400}
           alt="image"
         />
+        <Image
+          className={styles.white}
+          src={"/Home/hero10.png"}
+          width={400}
+          height={400}
+          alt="image"
+        />
         <div className={styles.content}>
           <div className={styles.heading}>Emerging Poetry</div>
           <div className={styles.text}>
@@ -104,73 +166,52 @@ export default function Index() {
           </div>
         </div>
       </div>
-      <div className={styles.container}>
-        {/* Poet Video */}
-        <motion.video
-          ref={poetVideoRef}
-          className={styles.historyVideo}
-          src="/animations/poet.mp4" // Update with actual video path
-          autoPlay={false}
-          muted
-          playsInline
-        />
-        <div className={styles.left}>
-          <FadeInSection>
-            <Quotes Quotesdata={Quotesdata[0]} />
-          </FadeInSection>
-          <FadeInSection>
-            <Poem Poemdata={Poemdata[0]} />
-          </FadeInSection>
-          <FadeInSection>
-            <Quotes Quotesdata={Quotesdata[1]} />
-          </FadeInSection>
-          {/* Left column Writing Video */}
-          <div ref={writingContainerRef1}>
-            <motion.video
-              ref={writingVideoRef1}
-              className={styles.historyVideo1}
-              src="/animations/writing.mp4" // Update with actual video path
-              autoPlay={false}
-              muted
-              playsInline
-            />
+
+<div className={styles.animatedVideoContainer}>
+  <motion.video
+    src="/Home/toad.mp4"  // Update with your actual video path
+    autoPlay
+    loop
+    muted
+    playsInline
+    className={styles.frog}
+  />
+  <div className={styles.containercon}>
+    <div className={styles.quotetext}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+    <div className={styles.quoteauthor}>- Lorem ipsum</div>
+  </div>
+</div>
+
+<div>
+<div className={styles.pages}>
+        {currentItems.map((item, index) => (
+          <div key={item.poemid} className={styles.box1}>
+            {/* First card of the page is rendered big */}
+            <Poem Poemdata={item} big={index === 0} />
           </div>
-          <FadeInSection>
-            <Poem Poemdata={Poemdata[1]} />
-          </FadeInSection>
-          <FadeInSection>
-            <Poem Poemdata={Poemdata[0]} />
-          </FadeInSection>
-        </div>
-        <div className={styles.right}>
-          <FadeInSection>
-            <Poem Poemdata={Poemdata[1]} />
-          </FadeInSection>
-          {/* Right column Writing Video */}
-          <div ref={writingContainerRef2}>
-            <motion.video
-              ref={writingVideoRef2}
-              className={styles.historyVideo1}
-              src="/animations/writing2.mp4" // Update with actual video path
-              autoPlay={false}
-              muted
-              playsInline
-            />
-          </div>
-          <FadeInSection>
-            <Others />
-          </FadeInSection>
-          <FadeInSection>
-            <Poem Poemdata={Poemdata[2]} />
-          </FadeInSection>
-          <FadeInSection>
-            <Quotes Quotesdata={Quotesdata[0]} />
-          </FadeInSection>
-          <FadeInSection>
-            <Poem Poemdata={Poemdata[2]} />
-          </FadeInSection>
-        </div>
+        ))}
       </div>
+      <div className={styles.paginationControls}>
+        <button className={styles.prevButton} onClick={handlePrev}>Prev</button>
+        {Array.from({ length: totalPages }).map((_, i) => (
+          <button
+            key={i}
+            className={`${styles.pageButton} ${page === i ? styles.activePageButton : ''}`}
+            onClick={() => handlePageClick(i)}
+          >
+            {i + 1}
+          </button>
+        ))}
+        <button className={styles.nextButton} onClick={handleNext}>Next</button>
+      </div>
+
+  <div className={styles.marginbtm}>
+    <NewSlider titlehead={'Prose'} title={'Featured Poetry'} slider={3}/>
+    <NewSlider titlehead={'Prose'} title={'Recent Poetry'} slider={3}/>
+
+  </div>
+</div>
+
     </div>
   );
 }

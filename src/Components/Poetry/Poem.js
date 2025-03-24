@@ -1,14 +1,20 @@
 import React from 'react';
 import styles from '@/styles/Poetry/Poetry.module.css';
 import Link from 'next/link';
-import { FaComment, FaHeart, FaRegComment, FaRegHeart } from "react-icons/fa";
+import { FaComment, FaHeart, FaRegComment, FaRegHeart, FaUser } from "react-icons/fa";
+import Image from 'next/image';
 
-export default function Poem({Poemdata}) {
+export default function Poem({Poemdata, big}) {
   return (
     <div className={styles.poem}>
+      <div className={styles.usercontent}>
+        <FaUser className={styles.usericon}/>
+        <div className={styles.username}>Some Name</div>
+      </div>
+      <div className={styles.grow}>
         <div className={styles.title}>{Poemdata.title}</div>
         <div className={styles.text}>
-            {Poemdata.poem.slice(0,250).split("<br/>").map((line, index) => (
+            {Poemdata.poem.slice(0,big ? 300 : 100).split("<br/>").map((line, index) => (
                 <React.Fragment key={index}>
                     {line}
                     <br />
@@ -30,6 +36,7 @@ export default function Poem({Poemdata}) {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 }

@@ -1,6 +1,5 @@
 import BelowHero from "@/Components/Home/BelowHero";
 import Blobslider from "@/Components/Home/Blobslider";
-import FinalCards from "@/Components/Home/FinalCards";
 import Hero from "@/Components/Home/Hero";
 import Kids from "@/Components/Home/Kids";
 import News from "@/Components/Home/News";
@@ -25,7 +24,7 @@ export default function Home() {
         <Runner />
         <News />
         <Testimonails />
-        <FinalCards />
+        {/* <FinalCards /> */}
       </main>
     </>
   );

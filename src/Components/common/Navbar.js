@@ -89,8 +89,7 @@ export default function Navbar() {
           </div>
 
           <Link href="/Gallery" className={styles.li} onClick={() => setIsMobileMenuOpen(false)}>Gallery</Link>
-          <Link href="/Events" className={styles.li} onClick={() => setIsMobileMenuOpen(false)}>Events</Link>
-          <Link href="/News" className={styles.li} onClick={() => setIsMobileMenuOpen(false)}>News</Link>
+          <Link href="/NewsnEvents" className={styles.li} onClick={() => setIsMobileMenuOpen(false)}>News & Events</Link>
           <div className={styles.linkcontainer} onClick={()=>setDropdown(!dropdown)}>
             <div>
             <Link href="/Submissions" className={styles.li} onClick={() => setIsMobileMenuOpen(false)}>Submissions</Link>
