@@ -1,6 +1,6 @@
 "use client";
-import React, { useState, useRef } from "react";
-import { motion, AnimatePresence, useScroll, useTransform } from "framer-motion";
+import React, { useState, useRef, useEffect } from "react";
+import { motion, AnimatePresence, useScroll, useTransform, useAnimation } from "framer-motion";
 import styles from "@/styles/Home/blobslider.module.css";
 import Image from "next/image";
 
@@ -15,6 +15,20 @@ export default function BlobSlider() {
   const [index, setIndex] = useState(0);
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start end", "end start"] });
+  const controls = useAnimation();
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    // Check window width after mounting
+    const handleResize = () => {
+      setIsDesktop(window.innerWidth > 786);
+    };
+
+    handleResize(); // Run once on mount
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   // Animate "Learn" image with scroll
   const x = useTransform(scrollYProgress, [0, 1], [150, 0]);
@@ -89,7 +103,7 @@ export default function BlobSlider() {
 
         {/* Image + Button Section */}
         <div className={styles.imgContainer}>
-          <motion.div className={styles.imgAnimate} style={{ x }}>
+          <motion.div className={styles.imgAnimate} style={isDesktop ? { x } : {}}>
             <Image className={styles.image} src={"/Home/learn.png"} width={500} height={500} alt="Learn More" />
           </motion.div>
           <button className={styles.btn}>Learn More</button>

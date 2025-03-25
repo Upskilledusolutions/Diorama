@@ -16,7 +16,7 @@ export default function TermsAndConditions() {
           alt="image"
         />
         <div className={styles.content}>
-          <div className={styles.heading}>Terms and Conditions</div>
+          <div className={styles.heading}>Privacy Policy</div>
           <div className={styles.text}>
             We help children engage through fun and educational Magazines.
           </div>

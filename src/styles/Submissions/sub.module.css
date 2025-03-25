@@ -4,11 +4,9 @@
     overflow-x: hidden;
     font-family: 'Arial', sans-serif;
   }
-  
 
   .banner{
     background-color: rgba(0, 0, 0, 0.5);
-    color: white;
     margin-top: 80px;
     width: 100%;
     height: 300px;
@@ -26,10 +24,22 @@
     object-fit: cover;
     z-index: -1;
 }
-  
-  .content {
-    width: 40vw;
-  }
+.white{
+    position: absolute;
+    left: -22.5%;
+    top: 0;
+    width: 100vw;
+    height: 300px;
+    z-index: 1;
+    object-fit: cover;
+}
+.content{
+    width: 30vw;
+    position: absolute;
+    bottom: 30px;
+    left: 10vw;
+    z-index: 2;
+}
   
   .heading {
     font-size: 50px;
@@ -216,15 +226,28 @@
     .heading {
       font-size: 40px;
     }
-    .banner {
-      width: 92%;
-      padding: 0 4%;
-      height: 300px;
-    }
-    /* Content inside banner now takes most of available width */
-    .content {
-      width: 80%;
-    }
+    /* Banner adjusts to full width and smaller side paddings */
+ .banner {
+  width: 92%;
+  padding: 0 4%;
+  height: 300px;
+}
+.white{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 300px;
+  z-index: 1;
+  object-fit: cover;
+}
+/* Content inside banner now takes most of available width */
+.content {
+  width: 80%;
+}
+.keyDatesSection{
+  margin: 0;
+}
     .heading {
       font-size: 35px;
     }

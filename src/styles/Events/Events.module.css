@@ -115,6 +115,34 @@
       flex: 0 0 100%;
       margin:10px 0;
     }
+    .banner {
+      width: 92%;
+      padding: 0 4%;
+      height: 300px;
+    }
+    .white{
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100vw;
+      height: 300px;
+      z-index: 1;
+      object-fit: cover;
+  }
+    /* Content inside banner now takes most of available width */
+    .content {
+      width: 80%;
+    }
+    .sliderSection{
+      padding: 20px 3vw;
+    }
+    .card{
+      width: 100%;
+      overflow: hidden;
+    }
+    .sectionTitle{
+      font-size: 40px;
+    }
   }
   
   .cardImage {

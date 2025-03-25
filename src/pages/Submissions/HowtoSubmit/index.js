@@ -16,8 +16,15 @@ export default function HowToSubmit() {
           height={400}
           alt="image"
         />
+        <Image
+          className={styles.white}
+          src={"/Home/hero10.png"}
+          width={400}
+          height={400}
+          alt="image"
+        />
         <div className={styles.content}>
-          <div className={styles.heading}>How to submit</div>
+          <div className={styles.heading}>How to Submit</div>
           <div className={styles.text}>
             We help children engage through fun and educational Magazines.
           </div>

@@ -359,6 +359,15 @@
   .frog{
     width: 30vw;
   }
+  .animatedVideoContainer{
+    margin-bottom: 50px;
+  }
+  .heading1{
+    margin-top: 0;
+  }
+  .heading3{
+    line-height: 40px;
+  }
 }
 
 /* Icon Wrapper for toggling between outline and solid icons */

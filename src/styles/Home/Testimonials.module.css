@@ -151,4 +151,11 @@
     .slider{
         width: 100vw;
     }
+    .tv{
+        width: 105vw;
+        height: auto;
+    }
+    .img{
+        height: 190px;
+    }
 }

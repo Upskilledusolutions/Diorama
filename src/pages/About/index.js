@@ -54,6 +54,13 @@ export default function Index() {
           height={400}
           alt="image"
         />
+        <Image
+          className={styles.white}
+          src={"/Home/hero10.png"}
+          width={400}
+          height={400}
+          alt="image"
+        />
         <div className={styles.content}>
           <div className={styles.heading}>About</div>
           <div className={styles.text}>

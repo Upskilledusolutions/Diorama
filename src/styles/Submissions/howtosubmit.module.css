@@ -5,11 +5,8 @@
     font-family: Arial, sans-serif;
     color: #333;
   }
-  
- 
   .banner{
     background-color: rgba(0, 0, 0, 0.5);
-    color: white;
     margin-top: 80px;
     width: 100%;
     height: 300px;
@@ -27,10 +24,22 @@
     object-fit: cover;
     z-index: -1;
 }
-  
-  .content {
-    width: 60vw;
-  }
+.white{
+    position: absolute;
+    left: -22.5%;
+    top: 0;
+    width: 100vw;
+    height: 300px;
+    z-index: 1;
+    object-fit: cover;
+}
+.content{
+    width: 30vw;
+    position: absolute;
+    bottom: 30px;
+    left: 10vw;
+    z-index: 2;
+}
   
   .heading {
     font-size: 50px;
@@ -135,6 +144,15 @@
       width: 92%;
       padding: 0 4%;
       height: 300px;
+    }
+    .white{
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100vw;
+      height: 300px;
+      z-index: 1;
+      object-fit: cover;
     }
     /* Content inside banner now takes most of available width */
     .content {

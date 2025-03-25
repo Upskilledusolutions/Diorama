@@ -7,20 +7,27 @@ import { FaYoutube, FaFacebookF, FaInstagram, FaTwitter } from 'react-icons/fa';
 /* Banner Component */
 const Banner = () => (
   <div className={styles.banner}>
-    <Image
-      className={styles.squirrel}
-      src={"/banners/14.jpg"}
-      width={400}
-      height={400}
-      alt="Banner Background"
-    />
-    <div className={styles.content}>
-      <div className={styles.heading}>Follow Us</div>
-      <div className={styles.text}>
-        Connect with us on your favorite social media platforms.
-      </div>
+  <Image
+    className={styles.squirrel}
+    src={"/banners/14.jpg"}
+    width={400}
+    height={400}
+    alt="image"
+  />
+  <Image
+    className={styles.white}
+    src={"/Home/hero10.png"}
+    width={400}
+    height={400}
+    alt="image"
+  />
+  <div className={styles.content}>
+    <div className={styles.heading}>Follow Us</div>
+    <div className={styles.text}>
+      We help children engage through fun and educational Magazines.
     </div>
   </div>
+</div>
 );
 
 /* Reusable Social Media Section Component */

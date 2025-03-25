@@ -220,8 +220,8 @@
   .flex3{
     display: flex;
     justify-content: space-between;
-    width: 80vw;
-    margin: 20px auto 80px;
+    width: 82vw;
+    margin: 20px 8.75vw 80px;
   }
   .card{
     width: 35vw;
@@ -235,4 +235,25 @@
     height: 270px;
     width: 100%;
     object-fit: cover;
+  }
+  @media (max-width: 768px) {
+    .flex2{
+      flex-direction: column;
+    }
+    .img1{
+      width: 80vw;
+      height: auto;
+    }
+    .heading{
+      font-size: 40px;
+    }
+    .flex3{
+      flex-direction: column;
+      margin: 20px 5vw;
+      gap: 20px;
+    }
+    .card{
+      width: 100%;
+      padding: 20px 4vw;
+    }
   }
