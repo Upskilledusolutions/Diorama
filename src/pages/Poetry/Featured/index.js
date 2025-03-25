@@ -13,51 +13,61 @@ const Poemdata = [
   {
     poemid: "1",
     title: "Poem 1",
+    "src":"/Home/13.png",
     poem: "Lorem ipsum dolor sit amet, consectetur adipiscing elit <br/> sed do eiusmod tempor incididunt ut <br/> labore et dolore magna aliqua."
   },
   {
     poemid: "2",
     title: "Poem 2",
+    "src":"/Home/14.png",
     poem: "Lorem ipsum dolor sit amet, consectetur adipiscing elit <br/> sed do eiusmod tempor incididunt ut <br/> labore et dolore magna aliqua."
   },
   {
     poemid: "3",
     title: "Poem 3",
+    "src":"/Home/15.png",
     poem: "Lorem ipsum dolor sit amet, consectetur adipiscing elit <br/> sed do eiusmod tempor incididunt ut <br/> labore et dolore magna aliqua."
   },
   {
     poemid: "4",
     title: "Poem 4",
+    "src":"/Home/16.png",
     poem: "Lorem ipsum dolor sit amet, consectetur adipiscing elit <br/> sed do eiusmod tempor incididunt ut <br/> labore et dolore magna aliqua."
   },
   {
     poemid: "5",
     title: "Poem 5",
+    "src":"/Home/13.png",
     poem: "Lorem ipsum dolor sit amet, consectetur adipiscing elit <br/> sed do eiusmod tempor incididunt ut <br/> labore et dolore magna aliqua."
   },
   {
     poemid: "6",
     title: "Poem 6",
+    "src":"/Home/14.png",
     poem: "Lorem ipsum dolor sit amet, consectetur adipiscing elit <br/> sed do eiusmod tempor incididunt ut <br/> labore et dolore magna aliqua."
   },
   {
     poemid: "7",
     title: "Poem 7",
+    "src":"/Home/15.png",
     poem: "Lorem ipsum dolor sit amet, consectetur adipiscing elit <br/> sed do eiusmod tempor incididunt ut <br/> labore et dolore magna aliqua."
   },
   {
     poemid: "8",
     title: "Poem 8",
+    "src":"/Home/16.png",
     poem: "Lorem ipsum dolor sit amet, consectetur adipiscing elit <br/> sed do eiusmod tempor incididunt ut <br/> labore et dolore magna aliqua."
   },
   {
     poemid: "9",
     title: "Poem 9",
+    "src":"/Home/13.png",
     poem: "Lorem ipsum dolor sit amet, consectetur adipiscing elit <br/> sed do eiusmod tempor incididunt ut <br/> labore et dolore magna aliqua."
   },
   {
     poemid: "10",
     title: "Poem 10",
+    "src":"/Home/14.png",
     poem: "Lorem ipsum dolor sit amet, consectetur adipiscing elit <br/> sed do eiusmod tempor incididunt ut <br/> labore et dolore magna aliqua."
   }
 ];
@@ -147,7 +157,7 @@ export default function Index() {
       <div className={styles.banner}>
         <Image
           className={styles.squirrel}
-          src={"/banners/10.jpg"}
+          src={"/banners/10 (2).jpg"}
           width={400}
           height={400}
           alt="image"
@@ -183,6 +193,7 @@ export default function Index() {
 </div>
 
 <div>
+<div className={styles.blue}>
 <div className={styles.pages}>
         {currentItems.map((item, index) => (
           <div key={item.poemid} className={styles.box1}>
@@ -204,6 +215,7 @@ export default function Index() {
         ))}
         <button className={styles.nextButton} onClick={handleNext}>Next</button>
       </div>
+    </div>
 
   <div className={styles.marginbtm}>
     <NewSlider titlehead={'Prose'} title={'Emerging Poetry'} slider={3}/>

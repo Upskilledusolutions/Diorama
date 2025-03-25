@@ -1,5 +1,4 @@
 import Poem from '@/Components/Poetry/Poem'
-import Quotes from '@/Components/Poetry/Quotes'
 import React, { useEffect, useRef } from 'react'
 import styles from '@/styles/Poetry/Poetry.module.css'
 import FadeInSection from '@/Components/Poetry/FadeInSection';
@@ -7,22 +6,24 @@ import { motion, useScroll } from "framer-motion";
 import Image from 'next/image';
 import NewSlider from '@/Components/Poetry/NewSlider'
 import NewSliderCnf from '@/Components/Poetry/NewSliderCnf'
-import Others from '@/Components/Poetry/Others';
 
 const Poemdata = [
   {
     "poemid": "1",
     "title": "Poem 1",
+    "src":"/Home/13.png",
     "poem": "Lorem ipsum dolor sit amet, consectetur adipiscing elit <br/> sed do eiusmod tempor incididunt ut <br/> labore et dolore magna aliqua. Ut enim ad minim veniam, <br/> quis nostrud exercitation ullamco laboris nisi ut aliquip <br/> ex ea commodo consequat. <br/> Duis aute irure dolor in reprehenderit <br/> in voluptate velit esse cillum dolore <br/> eu fugiat nulla pariatur."
   },
   {
     "poemid": "2",
     "title": "Poem 2",
+    "src":"/Home/14.png",
     "poem": "Lorem ipsum dolor sit amet, <br/> consectetur adipiscing elit sed do <br/> eiusmod tempor incididunt ut <br/> labore et dolore magna aliqua. <br/> Ut enim ad minim veniam, <br/> quis nostrud exercitation ullamco <br/> laboris nisi ut aliquip <br/> ex ea commodo consequat. <br/> Duis aute irure dolor in reprehenderit <br/> in voluptate velit esse cillum dolore <br/> eu fugiat nulla pariatur."
   },
   {
     "poemid": "3",
     "title": "Poem 3",
+    "src":"/Home/15.png",
     "poem": "Lorem ipsum dolor sit amet, <br/> consectetur adipiscing elit <br/> sed do eiusmod tempor incididunt ut <br/> labore et dolore magna aliqua. Ut enim ad minim veniam, <br/> quis nostrud exercitation ullamco laboris nisi ut aliquip <br/> ex ea commodo consequat. <br/> Duis aute irure <br/> dolor in reprehenderit <br/> in voluptate velit esse <br/> cillum dolore <br/> eu fugiat nulla pariatur."
   }
 ];
@@ -94,7 +95,7 @@ export default function Index() {
       <div className={styles.banner}>
         <Image
           className={styles.squirrel}
-          src={"/banners/10.jpg"}
+          src={"/banners/10 (2).jpg"}
           width={400}
           height={400}
           alt="image"
@@ -130,8 +131,8 @@ export default function Index() {
 </div>
 
 <div>
+<div className={styles.blue}>
   <div className={styles.heading1}>Featured Poetry</div>
-  <div>
   <FadeInSection>
     <Poem Poemdata={Poemdata[0]} big={true}/>
   </FadeInSection>
@@ -143,8 +144,16 @@ export default function Index() {
   </FadeInSection>
   </div>
 
+  <div className={styles.blue2}>
+  <Image
+  src="/animations/rabbit.gif"  // Update with your actual GIF path
+  className={styles.frog2}
+  width={100}
+  height={100}
+  alt="animated GIF"
+  unoptimized // Ensures Next.js doesn't optimize the GIF as a static image
+/>
   <div className={styles.heading1}>Emerging Poetry</div>
-  <div>
   <FadeInSection>
     <Poem Poemdata={Poemdata[0]} big={true}/>
   </FadeInSection>
@@ -156,8 +165,16 @@ export default function Index() {
   </FadeInSection>
   </div>
 
+  <div className={styles.blue3}>
+  <Image
+  src="/animations/rabbit2.gif"  // Update with your actual GIF path
+  className={styles.frog3}
+  width={100}
+  height={100}
+  alt="animated GIF"
+  unoptimized // Ensures Next.js doesn't optimize the GIF as a static image
+/>
   <div className={styles.heading1}>Recent Poetry</div>
-  <div>
   <FadeInSection>
     <Poem Poemdata={Poemdata[0]} big={true}/>
   </FadeInSection>

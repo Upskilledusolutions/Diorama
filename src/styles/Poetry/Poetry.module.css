@@ -15,6 +15,15 @@
     background: white;
     transition: all 0.3s ease-in-out;
 }
+.profile{
+    width: 70px;
+    height: 70px;
+    padding: 20px;
+    object-fit: cover;
+    border: 5px solid rgb(70, 70, 70);
+    box-shadow: rgba(0, 0, 0, 0.25) 3px 3px 5px;
+    border-radius: 10px;
+}
 .historyVideo{
     position: absolute;
     right: 0;
@@ -119,6 +128,7 @@
     margin-bottom: 30px;
     display: flex;
     gap: 5vw;
+    background-color: white;
 }
 .heading1{
     width: 98vw;
@@ -127,6 +137,7 @@
     text-align: center;
     margin-top: 40px;
     margin-bottom: 20px;
+    color: white;
   }
 .usercontent{
     text-align: center;
@@ -400,7 +411,7 @@
   .prevButton,
   .nextButton,
   .pageButton {
-    background-color: rgb(101, 101, 101);
+    background-color: rgb(33, 117, 177);
     border: none;
     color: white;
     padding: 10px 15px;
@@ -414,9 +425,45 @@
   .prevButton:hover,
   .nextButton:hover,
   .pageButton:hover {
-    background-color: rgb(101, 101, 101);
+    background-color: rgb(33, 62, 177);
   }
   
   .activePageButton {
-    background-color: black;
+    background-color: rgb(33, 62, 177);
   }
+
+  .blue{
+    background-color: #00eaff;
+    padding: 50px 0;
+  }
+
+  .blue2{
+    background-color: #007bc7;
+    padding: 50px 0;
+    position: relative;
+  }
+
+  .blue3{
+    background-color: #0035c7;
+    padding: 50px 0;
+    position: relative;
+  }
+  .marginbtm{
+    background-color: #9800c7;
+  }
+
+  .frog2{
+    position: absolute;
+    left: 5vw;
+    top: 30px;
+    width: 17vw;
+    height: auto;
+}
+
+.frog3{
+    position: absolute;
+    right: 5vw;
+    top: 30px;
+    width: 17vw;
+    height: auto;
+}

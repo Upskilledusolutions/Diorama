@@ -1,5 +1,4 @@
 import Poem from '@/Components/Poetry/Poem'
-import Quotes from '@/Components/Poetry/Quotes'
 import React, { useEffect, useRef } from 'react'
 import styles from '@/styles/Poetry/Poetry.module.css'
 import FadeInSection from '@/Components/Poetry/FadeInSection';
@@ -7,7 +6,6 @@ import { motion, useScroll } from "framer-motion";
 import Image from 'next/image';
 import NewSlider from '@/Components/Poetry/NewSliderPoetry'
 import NewSliderCnf from '@/Components/Poetry/NewSliderCnf'
-import Others from '@/Components/Poetry/Others';
 
 const Poemdata = [
   {
@@ -94,7 +92,7 @@ export default function Index() {
       <div className={styles.banner}>
         <Image
           className={styles.squirrel}
-          src={"/banners/10.jpg"}
+          src={"/banners/10 (1).jpg"}
           width={400}
           height={400}
           alt="image"
@@ -130,8 +128,8 @@ export default function Index() {
 </div>
 
 <div>
+  <div className={styles.blue}>
   <div className={styles.heading1}>Featured Prose</div>
-  <div>
   <FadeInSection>
     <Poem Poemdata={Poemdata[0]} big={true}/>
   </FadeInSection>
@@ -143,8 +141,16 @@ export default function Index() {
   </FadeInSection>
   </div>
 
+  <div className={styles.blue2}>
+  <Image
+  src="/animations/rabbit.gif"  // Update with your actual GIF path
+  className={styles.frog2}
+  width={100}
+  height={100}
+  alt="animated GIF"
+  unoptimized // Ensures Next.js doesn't optimize the GIF as a static image
+/>
   <div className={styles.heading1}>Emerging Prose</div>
-  <div>
   <FadeInSection>
     <Poem Poemdata={Poemdata[0]} big={true}/>
   </FadeInSection>
@@ -156,8 +162,16 @@ export default function Index() {
   </FadeInSection>
   </div>
 
+  <div className={styles.blue3}>
+  <Image
+  src="/animations/rabbit2.gif"  // Update with your actual GIF path
+  className={styles.frog3}
+  width={100}
+  height={100}
+  alt="animated GIF"
+  unoptimized // Ensures Next.js doesn't optimize the GIF as a static image
+/>
   <div className={styles.heading1}>Recent Prose</div>
-  <div>
   <FadeInSection>
     <Poem Poemdata={Poemdata[0]} big={true}/>
   </FadeInSection>

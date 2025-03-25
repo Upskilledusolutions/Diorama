@@ -118,7 +118,7 @@ const sampleUpcomingEvents = [
   ];
 
 // Slider component for a given section
-const EventSlider = ({ events, sectionTitle }) => {
+const EventSlider = ({ events, sectionTitle, imgsrc, left }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [visibleCards, setVisibleCards] = useState(3);
 
@@ -153,6 +153,7 @@ const EventSlider = ({ events, sectionTitle }) => {
 
   return (
     <div className={styles.sliderSection}>
+      <Image src={imgsrc} className={left ? styles.imgsrc1 : styles.imgsrc} width={1000} height={1000} alt='img'/>
       <h2 className={styles.sectionTitle}>{sectionTitle}</h2>
       <div className={styles.sliderContainer}>
         <button className={styles.arrow} onClick={prev}>&lt;</button>
@@ -215,14 +216,16 @@ export default function EventsPage() {
         </div>
       </div>
 
+    <div className={styles.backg}>
       {/* Recent Events Section */}
-      <EventSlider events={sampleRecentEvents} sectionTitle="Recent News" />
+      <EventSlider events={sampleRecentEvents} imgsrc="/Home/17.png" sectionTitle="Recent News" />
 
       {/* Upcoming Events Section */}
-      <EventSlider events={sampleUpcomingEvents} sectionTitle="Upcoming Events" />
+      <EventSlider events={sampleUpcomingEvents} left={true} imgsrc="/Home/18.png" sectionTitle="Upcoming Events" />
 
       {/* Event Highlights Section */}
-      <EventSlider events={sampleHighlights} sectionTitle="Event Highlights" />
+      <EventSlider events={sampleHighlights} imgsrc="/Home/19.png" sectionTitle="Event Highlights" />
+      </div>
     </div>
   );
 }

@@ -10,6 +10,12 @@ const galleryData = [
   { id: 4, src: "/Home/img4.jpg", caption: "Mountain Peaks" },
   { id: 5, src: "/Home/img1.jpg", caption: "Ocean Breeze" },
   { id: 6, src: "/Home/img2.jpg", caption: "Desert Mirage" },
+  { id: 7, src: "/Home/img1.jpg", caption: "Sunset Over the Hills" },
+  { id: 8, src: "/Home/img2.jpg", caption: "City Lights" },
+  { id: 9, src: "/Home/img3.jpg", caption: "Forest Trail" },
+  { id: 10, src: "/Home/img4.jpg", caption: "Mountain Peaks" },
+  { id: 11, src: "/Home/img1.jpg", caption: "Ocean Breeze" },
+  { id: 12, src: "/Home/img2.jpg", caption: "Desert Mirage" },
 ];
 
 export default function Gallery() {

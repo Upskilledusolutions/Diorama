@@ -66,10 +66,11 @@
     padding: 2rem 8vw;
   }
   .sectionTitle {
-    font-size: 2rem;
+    font-size: 50px;
     margin-bottom: 1rem;
     font-weight: 900;
     text-align: center;
+    color: white;
   }
   .sliderContainer {
     display: flex;
@@ -102,7 +103,7 @@
   /* Responsive card widths */
   .card {
     background-color: #fff;
-    border-radius: 10px;
+    border-radius: 30px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     /* On desktop: 3 cards visible; on mobile: 1 card visible */
     flex: 0 0 calc(90% / 3);
@@ -123,6 +124,8 @@
   }
   .img{
     object-fit:cover;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
   }
   .cardContent {
     padding: 1rem;
@@ -141,4 +144,25 @@
     font-size: 0.95rem;
     color: #555;
   }
-  
+  .sliderSection{
+    position: relative;
+  }
+  .imgsrc{
+    position: absolute;
+    top: -50px;
+    right: 20px;
+    width: 15vw;
+    height: auto;
+  }
+  .imgsrc1{
+    position: absolute;
+    top: -50px;
+    left: 20px;
+    width: 15vw;
+    height: auto;
+  }
+  .backg{
+    background-color: rgb(137, 236, 173);
+    padding-bottom: 50px;
+    margin-bottom: 20px;
+  }

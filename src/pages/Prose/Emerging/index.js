@@ -13,61 +13,73 @@ const Poemdata = [
   {
     "poemid": "1",
     "title": "Prose Piece 1",
+    "src":"/Home/13.png",
     "poem": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, nisi vel consectetur consequat, nisl nisi dictum sapien, sed scelerisque felis sapien sit amet nunc. <br/> Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam."
   },
   {
     "poemid": "2",
     "title": "Prose Piece 2",
+    "src":"/Home/14.png",
     "poem": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident. <br/> Similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga."
   },
   {
     "poemid": "3",
     "title": "Prose Piece 3",
+    "src":"/Home/15.png",
     "poem": "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, <br/> sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem."
   },
   {
     "poemid": "4",
     "title": "Prose Piece 4",
+    "src":"/Home/16.png",
     "poem": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, nisi vel consectetur consequat, nisl nisi dictum sapien, sed scelerisque felis sapien sit amet nunc. <br/> Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam."
   },
   {
     "poemid": "5",
     "title": "Prose Piece 5",
+    "src":"/Home/13.png",
     "poem": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident. <br/> Similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga."
   },
   {
     "poemid": "6",
     "title": "Prose Piece 6",
+    "src":"/Home/14.png",
     "poem": "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, <br/> sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem."
   },
   {
     "poemid": "7",
     "title": "Prose Piece 7",
+    "src":"/Home/15.png",
     "poem": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, nisi vel consectetur consequat, nisl nisi dictum sapien, sed scelerisque felis sapien sit amet nunc. <br/> Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam."
   },
   {
     "poemid": "8",
     "title": "Prose Piece 8",
+    "src":"/Home/16.png",
     "poem": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident. <br/> Similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga."
   },
   {
     "poemid": "9",
     "title": "Prose Piece 9",
+    "src":"/Home/13.png",
     "poem": "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, <br/> sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem."
   },
   {
     "poemid": "10",
     "title": "Prose Piece 10",
+    "src":"/Home/14.png",
     "poem": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, nisi vel consectetur consequat, nisl nisi dictum sapien, sed scelerisque felis sapien sit amet nunc. <br/> Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam."
   },
   {
     "poemid": "11",
     "title": "Prose Piece 11",
+    "src":"/Home/15.png",
     "poem": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident. <br/> Similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga."
   },
   {
     "poemid": "12",
     "title": "Prose Piece 12",
+    "src":"/Home/16.png",
     "poem": "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, <br/> sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem."
   },
 ];
@@ -146,7 +158,7 @@ export default function Index() {
       <div className={styles.banner}>
         <Image
           className={styles.squirrel}
-          src={"/banners/10.jpg"}
+          src={"/banners/10 (1).jpg"}
           width={400}
           height={400}
           alt="image"
@@ -182,6 +194,7 @@ export default function Index() {
 </div>
 
 <div>
+<div className={styles.blue}>
 <div className={styles.pages}>
         {currentItems.map((item, index) => (
           <div key={item.poemid} className={styles.box1}>
@@ -203,6 +216,7 @@ export default function Index() {
         ))}
         <button className={styles.nextButton} onClick={handleNext}>Next</button>
       </div>
+  </div>
 
   <div className={styles.marginbtm}>
     <NewSlider titlehead={'Prose'} title={'Featured Prose'} slider={3}/>

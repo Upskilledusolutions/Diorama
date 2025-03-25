@@ -44,16 +44,19 @@ function Testimonials({title}) {
     {
       "poemid": "1",
       "title": "Poem 1",
+      "src":"/Home/13.png",
       "poem": "Lorem ipsum dolor sit amet, consectetur adipiscing elit <br/> sed do eiusmod tempor incididunt ut <br/> labore et dolore magna aliqua. Ut enim ad minim veniam, <br/> quis nostrud exercitation ullamco laboris nisi ut aliquip <br/> ex ea commodo consequat. <br/> Duis aute irure dolor in reprehenderit <br/> in voluptate velit esse cillum dolore <br/> eu fugiat nulla pariatur."
     },
     {
       "poemid": "2",
       "title": "Poem 2",
+      "src":"/Home/14.png",
       "poem": "Lorem ipsum dolor sit amet, <br/> consectetur adipiscing elit sed do <br/> eiusmod tempor incididunt ut <br/> labore et dolore magna aliqua. <br/> Ut enim ad minim veniam, <br/> quis nostrud exercitation ullamco <br/> laboris nisi ut aliquip <br/> ex ea commodo consequat. <br/> Duis aute irure dolor in reprehenderit <br/> in voluptate velit esse cillum dolore <br/> eu fugiat nulla pariatur."
     },
     {
       "poemid": "3",
       "title": "Poem 3",
+      "src":"/Home/15.png",
       "poem": "Lorem ipsum dolor sit amet, <br/> consectetur adipiscing elit <br/> sed do eiusmod tempor incididunt ut <br/> labore et dolore magna aliqua. Ut enim ad minim veniam, <br/> quis nostrud exercitation ullamco laboris nisi ut aliquip <br/> ex ea commodo consequat. <br/> Duis aute irure <br/> dolor in reprehenderit <br/> in voluptate velit esse <br/> cillum dolore <br/> eu fugiat nulla pariatur."
     }
   ];
@@ -127,7 +130,7 @@ function Testimonials({title}) {
         <div className={styles.card}>
           <div className={styles.imgcontainer}>
             <div className={styles.img}>
-              <FaUser className={styles.icon}/>
+              <Image src={data.src} className={styles.profile} height={300} width={300} alt='img'/>
             </div>
             <div>
             <div className={styles.name}>{data.title}</div>

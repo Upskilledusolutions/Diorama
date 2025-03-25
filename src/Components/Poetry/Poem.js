@@ -8,7 +8,7 @@ export default function Poem({Poemdata, big}) {
   return (
     <div className={styles.poem}>
       <div className={styles.usercontent}>
-        <FaUser className={styles.usericon}/>
+        <Image src={Poemdata.src} className={styles.profile} height={300} width={300} alt='img'/>
         <div className={styles.username}>Some Name</div>
       </div>
       <div className={styles.grow}>

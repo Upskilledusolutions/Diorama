@@ -1,50 +1,9 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import styles from '@/styles/Gallery/Gallery.module.css';
 import Grid from '@/Components/Gallery/grid';
+import { motion } from "framer-motion";
 import Image from 'next/image';
-
-// AutoPlayVideo component
-const AutoPlayVideo = ({ src, className, ...props }) => {
-  const videoRef = useRef(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            // Restart and play when in view
-            videoRef.current.currentTime = 0;
-            videoRef.current.play();
-          } else {
-            videoRef.current.pause();
-          }
-        });
-      },
-      { threshold: 0.5 } // Adjust threshold as needed
-    );
-
-    if (videoRef.current) {
-      observer.observe(videoRef.current);
-    }
-
-    return () => {
-      if (videoRef.current) {
-        observer.unobserve(videoRef.current);
-      }
-    };
-  }, []);
-
-  return (
-    <video
-      ref={videoRef}
-      src={src}
-      className={className}
-      muted
-      playsInline
-      {...props}
-    />
-  );
-};
+import Link from 'next/link';
 
 export default function Index() {
   return (
@@ -52,7 +11,14 @@ export default function Index() {
       <div className={styles.banner}>
         <Image
           className={styles.squirrel}
-          src={"/banners/7.jpg"}
+          src={"/banners/20.jpg"}
+          width={400}
+          height={400}
+          alt="image"
+        />
+        <Image
+          className={styles.white}
+          src={"/Home/hero10.png"}
           width={400}
           height={400}
           alt="image"
@@ -64,22 +30,106 @@ export default function Index() {
           </div>
         </div>
       </div>
-
-      {/* Auto-playing videos */}
-      <div className={styles.videoContainer}>
-        <AutoPlayVideo
-          src="/animations/gallery.mp4" // Replace with your actual video path
-          className={styles.autoVideo}
+<div className={styles.blue}>
+    <div className={styles.flex2}>
+    <motion.video
+    src="/Home/toad.mp4"  // Update with your actual video path
+    autoPlay
+    loop
+    muted
+    playsInline
+    className={styles.frog}
+  />
+      <div>
+      <Image
+          className={styles.img1}
+          src={"/Home/img3.jpg"}
+          width={400}
+          height={400}
+          alt="image"
         />
       </div>
-      <div className={styles.videoContainer}>
-        <AutoPlayVideo
-          src="/animations/camera.mp4" // Replace with your actual video path
-          className={styles.autoVideo1}
+      <div>
+        <div className={styles.heading}>Event gallery 1</div>
+        <div className={styles.text}>Event gallery 1 content goes here - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+        <div className={styles.date}><b>Date: </b>20/ 02/ 2025 - 22/ 02/ 2025</div>
+        <Link href={'/Gallery/1.js'} className={styles.btn}>Go to Gallery</Link>
+      </div>
+    </div>
+
+    <div className={styles.flex3}>
+
+      <div className={styles.card}>
+      <Image
+          className={styles.img2}
+          src={"/Home/img3.jpg"}
+          width={400}
+          height={400}
+          alt="image"
         />
+      <div>
+        <div className={styles.heading1}>Event gallery 2</div>
+        <div className={styles.text1}>Event gallery 2 content goes here.</div>
+        <div className={styles.date1}><b>Date: </b>20/ 02/ 2025 - 22/ 02/ 2025</div>
+        <Link href={'/Gallery/1.js'} className={styles.btn1}>Go to Gallery</Link>
+      </div>
       </div>
 
-      <Grid />
+      <div className={styles.card}>
+      <Image
+          className={styles.img2}
+          src={"/Home/img3.jpg"}
+          width={400}
+          height={400}
+          alt="image"
+        />
+      <div>
+        <div className={styles.heading1}>Event gallery 2</div>
+        <div className={styles.text1}>Event gallery 2 content goes here.</div>
+        <div className={styles.date1}><b>Date: </b>20/ 02/ 2025 - 22/ 02/ 2025</div>
+        <Link href={'/Gallery/1.js'} className={styles.btn1}>Go to Gallery</Link>
+      </div>
+      </div>
+
+    </div>
+
+    <div className={styles.flex3}>
+
+<div className={styles.card}>
+<Image
+    className={styles.img2}
+    src={"/Home/img3.jpg"}
+    width={400}
+    height={400}
+    alt="image"
+  />
+<div>
+  <div className={styles.heading1}>Event gallery 2</div>
+  <div className={styles.text1}>Event gallery 2 content goes here.</div>
+  <div className={styles.date1}><b>Date: </b>20/ 02/ 2025 - 22/ 02/ 2025</div>
+  <Link href={'/Gallery/1.js'} className={styles.btn1}>Go to Gallery</Link>
+</div>
+</div>
+
+<div className={styles.card}>
+<Image
+    className={styles.img2}
+    src={"/Home/img3.jpg"}
+    width={400}
+    height={400}
+    alt="image"
+  />
+<div>
+  <div className={styles.heading1}>Event gallery 2</div>
+  <div className={styles.text1}>Event gallery 2 content goes here.</div>
+  <div className={styles.date1}><b>Date: </b>20/ 02/ 2025 - 22/ 02/ 2025</div>
+  <Link href={'/Gallery/1.js'} className={styles.btn1}>Go to Gallery</Link>
+</div>
+</div>
+
+</div>
+</div>
+    
     </div>
   );
 }
