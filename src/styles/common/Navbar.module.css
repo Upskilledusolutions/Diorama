@@ -164,10 +164,48 @@
   top: 20px;
 }
 
+.mobilelinks{
+  display: none;
+}
+.mobilelinks1{
+  display: none;
+}
+
 /* Mobile Navigation */
 @media (max-width: 768px) {
   .mobileMenuIcon {
     display: block;
+  }
+
+  .mobilelinks{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100vw;
+    padding:20px 5vw;
+    background-color: white;
+  }
+
+  .mobilelinks1{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: absolute;
+    top: -800px;
+    left: 0;
+    width: 100vw;
+    padding:20px 5vw;
+    background-color: white;
+  }
+
+  .normalink{
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 900;
   }
 
   /* For mobile, use max-height transition instead of height */
@@ -177,7 +215,7 @@
     left: 0;
     width: 100%;
     background: white;
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     overflow: hidden;
@@ -191,6 +229,7 @@
 
   .flex {
     flex-direction: column;
+    display: none;
     gap: 15px;
     padding: 20px 2.55%;
     width: 95%;
@@ -241,5 +280,47 @@
   }
   .dropdownMenu3{
     display: none;
+  }
+
+  .dropdownHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    width: 90%;
+    border-radius: 5px;
+    transition: background 0.3s;
+  }
+  
+  .dropdownarr {
+    transition: transform 0.3s ease;
+  }
+  
+  .rotate {
+    transform: rotate(90deg);
+  }
+  
+  .dropdownContent {
+    display: none;
+    flex-direction: column;
+    padding-top: 5px;
+    animation: dropdownFade 0.3s ease-in-out;
+  }
+  
+  .open {
+    display: flex;
+    margin: 10px 0;
+    gap: 10px;
+  }
+  
+  @keyframes dropdownFade {
+    from {
+      opacity: 0;
+      transform: translateY(-5px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 }
