@@ -16,13 +16,18 @@ export default function Navbar() {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      if (currentScrollY > lastScrollY) {
-        setVisible(false); // Hide navbar on scroll down
+
+      if (currentScrollY < 200) {
+        setVisible(true); // Always show navbar before 200px scroll
+      } else if (currentScrollY > lastScrollY) {
+        setVisible(false); // Hide when scrolling down past 200px
       } else {
-        setVisible(true); // Show navbar on scroll up
+        setVisible(true); // Show when scrolling up
       }
+
       setLastScrollY(currentScrollY);
     };
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
