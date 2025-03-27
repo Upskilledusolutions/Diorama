@@ -36,15 +36,11 @@
 
 .wolf{
     position: absolute;
-    top: 0px;
+    top: 30px;
     left: 10vw;
-    width: 8vw;
+    width: 12vw;
     height: auto;
     transition: 0.3s;
-}
-
-.wolf:hover{
-    transform: rotate3d(1, 1, 1, 15deg);
 }
 
 /* Footer Content Layout */
@@ -156,7 +152,8 @@
         top: 50px;
     }
     .wolf{
-        width: 30vw;
+        width: 50vw;
+        top: 10px;
     }
     .bg {
         width: 1000%;

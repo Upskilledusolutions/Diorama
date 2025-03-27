@@ -358,6 +358,8 @@
   }
   .frog{
     width: 30vw;
+    height: auto;
+    bottom: -50px;
   }
   .animatedVideoContainer{
     margin-bottom: 50px;
@@ -443,24 +445,31 @@
 
   .blue{
     background-color: #00eaff;
-    padding: 50px 0;
+    padding: 50px 0 150px;
+    position: relative;
   }
 
   .blue2{
     background-color: #007bc7;
-    padding: 50px 0;
+    padding: 50px 0 150px;
     position: relative;
   }
 
   .blue3{
     background-color: #0035c7;
-    padding: 50px 0;
+    padding: 50px 0 150px;
     position: relative;
   }
   .marginbtm{
     background-color: #9800c7;
+    position: relative;
   }
-
+.frog5{
+    position: absolute;
+    width: 12vw;
+    height: auto;
+    top: 90vh;
+}
   .frog2{
     position: absolute;
     left: 5vw;
@@ -475,4 +484,34 @@
     top: 30px;
     width: 17vw;
     height: auto;
+}
+.position{
+    position: absolute;
+    bottom: -15px;
+    right: 5vw;
+}
+.position2{
+    position: absolute;
+    bottom: -15px;
+    left: 5vw;
+}
+.slidein{
+    width: 10vw;
+    height: auto;
+}
+@media (max-width: 768px) {
+   .frog2{ 
+    width: 25vw;
+    left: -5vw;
+}
+.frog3{ 
+    width: 25vw;
+    right: 0vw;
+}
+.slidein{
+    width: 30vw;
+}
+.position{
+    bottom: -10px;
+}
 }

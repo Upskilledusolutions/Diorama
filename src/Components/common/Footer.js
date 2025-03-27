@@ -10,7 +10,14 @@ export default function Footer() {
       <Image className={styles.bg} src={"/Home/hill2.png"} width={1000} height={500} alt="image" />
       <Image className={styles.tree2} src={"/Home/tree2.svg"} width={1000} height={500} alt="image" />
       <Image className={styles.tree3} src={"/Home/tree3.svg"} width={1000} height={500} alt="image" />
-      <Image className={styles.wolf} src={"/Home/bear.png"} width={1000} height={500} alt="image" />
+      <Image
+  src="/Home/tb.gif"  // Update with your actual GIF path
+  className={styles.wolf}
+  width={100}
+  height={100}
+  alt="animated GIF"
+  unoptimized // Ensures Next.js doesn't optimize the GIF as a static image
+/>
 
       <div className={styles.content}>
         {/* Left Section */}

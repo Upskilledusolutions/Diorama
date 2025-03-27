@@ -112,6 +112,13 @@
     justify-content: space-around;
     gap: 20px;
     flex-wrap: wrap;
+    position: relative;
+  }
+  .frog7{
+    position: absolute;
+    right: 10vw;
+    width: 8vw;
+    height: auto;
   }
   
   .step {
@@ -148,9 +155,18 @@
   
   /* Form Section */
   .formSection {
-    background: #f9f9f9;
+    background: #ffc689;
     padding: 50px 8vw;
     text-align: center;
+    margin-bottom: 80px;
+    position: relative;
+  }
+  .frog6{
+    position: absolute;
+    width: 17vw;
+    height: auto;
+    top: 50px;
+    left: 15vw;
   }
   
   .formContainer {

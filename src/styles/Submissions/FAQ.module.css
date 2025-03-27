@@ -58,6 +58,15 @@
     flex-direction: column;
     gap: 20px;
     padding:120px 10vw 180px;
+    position: relative;
+  }
+
+  .frog7{
+    width: 8vw;
+    height: auto;
+    position: absolute;
+    right: 10vw;
+    top: 20px;
   }
   
   /* Individual FAQ Item */

@@ -194,3 +194,9 @@
     padding-bottom: 50px;
     margin-bottom: 20px;
   }
+  @media (max-width: 768px) {
+    .imgsrc1, .imgsrc{
+      width: 30vw;
+      top: 550px;
+    }
+  }

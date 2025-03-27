@@ -230,6 +230,8 @@
     padding: 20px;
     background-color: white;
     border-radius: 10px;
+    position: relative;
+    z-index: 2;
   }
   .img2{
     height: 270px;
@@ -255,5 +257,20 @@
     .card{
       width: 100%;
       padding: 20px 4vw;
+    }
+  }
+  .position{
+    position: absolute;
+    top: 150vh;
+    left: 1.5vw;
+    transform: rotate(-90deg)
+  }
+  .slidein{
+    width: 10vw;
+    height: auto;
+  }
+  @media (max-width: 768px) {
+    .position{
+      display: none;
     }
   }

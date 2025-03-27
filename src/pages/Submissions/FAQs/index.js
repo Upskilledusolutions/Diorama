@@ -105,6 +105,14 @@ export default function FAQPage() {
         </div>
       </div>
       <div className={styles.faqList}>
+      <Image
+  src="/Home/sn.gif"  // Update with your actual GIF path
+  className={styles.frog7}
+  width={100}
+  height={100}
+  alt="animated GIF"
+  unoptimized // Ensures Next.js doesn't optimize the GIF as a static image
+/>
         {faqData.map((faq, index) => (
           <FAQItem key={index} faq={faq} />
         ))}

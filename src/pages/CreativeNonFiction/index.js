@@ -3,7 +3,7 @@ import Quotes from '@/Components/Poetry/Quotes'
 import React, { useEffect, useRef } from 'react'
 import styles from '@/styles/Poetry/Poetry.module.css'
 import FadeInSection from '@/Components/Poetry/FadeInSection';
-import { motion, useScroll } from "framer-motion";
+import { motion, useInView, useScroll } from "framer-motion";
 import Image from 'next/image';
 import NewSlider from '@/Components/Poetry/NewSliderPoetry'
 import NewSliderPoetry from '@/Components/Poetry/NewSliderPoetry'
@@ -104,6 +104,22 @@ export default function Index() {
     return () => unsubscribeWriting2();
   }, [writingScrollProgress2]);
 
+  const SlideInDiv = ({ src }) => {
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: false });
+
+    return (
+      <motion.div
+        ref={ref}
+        initial={{ opacity: 0, y: 200 }}
+        animate={isInView ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+      >
+        <Image src={src} className={styles.slidein} height={200} width={200} alt='img' />
+      </motion.div>
+    );
+  };
+
   return (
     <div>
       <div className={styles.banner}>
@@ -130,14 +146,14 @@ export default function Index() {
       </div>
 
 <div className={styles.animatedVideoContainer}>
-  <motion.video
-    src="/Home/toad.mp4"  // Update with your actual video path
-    autoPlay
-    loop
-    muted
-    playsInline
-    className={styles.frog}
-  />
+  <Image
+  src="/Home/cat.gif"  // Update with your actual GIF path
+  className={styles.frog}
+  width={100}
+  height={100}
+  alt="animated GIF"
+  unoptimized // Ensures Next.js doesn't optimize the GIF as a static image
+/>
   <div className={styles.containercon}>
     <div className={styles.quotetext}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
     <div className={styles.quoteauthor}>- Lorem ipsum</div>
@@ -146,6 +162,9 @@ export default function Index() {
 
 <div>
 <div className={styles.blue}>
+<div className={styles.position}>
+    <SlideInDiv src={'/Home/20.png'} />
+  </div>
   <div className={styles.heading1}>Featured Creative Non-Fiction</div>
   <FadeInSection>
     <Poem Poemdata={Poemdata[0]} big={true}/>
@@ -159,6 +178,9 @@ export default function Index() {
   </div>
 
   <div className={styles.blue2}>
+  <div className={styles.position2}>
+    <SlideInDiv src={'/Home/21.png'} />
+  </div>
   <Image
   src="/animations/rabbit.gif"  // Update with your actual GIF path
   className={styles.frog2}
@@ -180,6 +202,9 @@ export default function Index() {
   </div>
 
   <div className={styles.blue3}>
+  <div className={styles.position}>
+    <SlideInDiv src={'/Home/22.png'} />
+  </div>
   <Image
   src="/animations/rabbit2.gif"  // Update with your actual GIF path
   className={styles.frog3}
@@ -201,6 +226,14 @@ export default function Index() {
   </div>
 
   <div className={styles.marginbtm}>
+  <Image
+  src="/Home/cat.gif"  // Update with your actual GIF path
+  className={styles.frog5}
+  width={100}
+  height={100}
+  alt="animated GIF"
+  unoptimized // Ensures Next.js doesn't optimize the GIF as a static image
+/>
     <NewSliderPoetry title={'Poetry'}/>
     <NewSlider title={'Prose'}/>
   </div>

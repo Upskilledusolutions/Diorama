@@ -84,6 +84,14 @@ export default function SubmissionsPage() {
 
       {/* Process (Steps) Section */}
       <section className={styles.stepsSection}>
+      <Image
+  src="/Home/sn.gif"  // Update with your actual GIF path
+  className={styles.frog7}
+  width={100}
+  height={100}
+  alt="animated GIF"
+  unoptimized // Ensures Next.js doesn't optimize the GIF as a static image
+/>
         <motion.div
           className={styles.steps}
           initial={{ opacity: 0, x: -50 }}
@@ -120,6 +128,14 @@ export default function SubmissionsPage() {
 
       {/* Submissions Form Section */}
       <section className={styles.formSection}>
+      <Image
+  src="/Home/ko.gif"  // Update with your actual GIF path
+  className={styles.frog6}
+  width={100}
+  height={100}
+  alt="animated GIF"
+  unoptimized // Ensures Next.js doesn't optimize the GIF as a static image
+/>
         <motion.div
           className={styles.formContainer}
           initial={{ opacity: 0, scale: 0.9 }}

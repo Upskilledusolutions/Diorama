@@ -1,11 +1,26 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import styles from '@/styles/Gallery/Gallery.module.css';
 import Grid from '@/Components/Gallery/grid';
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import Image from 'next/image';
 import Link from 'next/link';
 
 export default function Index() {
+    const SlideInDiv = ({ src }) => {
+      const ref = useRef(null);
+      const isInView = useInView(ref, { once: false });
+  
+      return (
+        <motion.div
+          ref={ref}
+          initial={{ opacity: 0, y: 200 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+        >
+          <Image src={src} className={styles.slidein} height={200} width={200} alt='img' />
+        </motion.div>
+      );
+    };
   return (
     <div className={styles.bcont}>
       <div className={styles.banner}>
@@ -31,6 +46,9 @@ export default function Index() {
         </div>
       </div>
 <div className={styles.blue}>
+<div className={styles.position}>
+    <SlideInDiv src={'/Home/20.png'} />
+  </div>
     <div className={styles.flex2}>
     <motion.video
     src="/Home/toad.mp4"  // Update with your actual video path
