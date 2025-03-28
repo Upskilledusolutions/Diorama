@@ -248,7 +248,7 @@
     background-color: rgba(0, 0, 0, 0.5);
     margin-top: 80px;
     width: 100%;
-    height: 300px;
+    height: 400px;
     position: relative;
     display: flex;
     align-items: center;
@@ -265,18 +265,18 @@
 }
 .white{
     position: absolute;
-    left: -22.5%;
+    left: -5%;
     top: 0;
-    width: 100vw;
-    height: 300px;
+    width: 70vw;
+    height: 400px;
     z-index: 1;
     object-fit: cover;
 }
 .content{
-    width: 30vw;
+    width: 25vw;
     position: absolute;
-    bottom: 30px;
-    left: 10vw;
+    bottom: 120px;
+    left: 17.5vw;
     z-index: 2;
 }
 .animatedVideoContainer{
@@ -291,11 +291,11 @@
     width: 15vw;
 }
 .heading{
-    font-size: 50px;
+    font-size: 45px;
     font-weight: 900;
 }
 .heading3{
-    font-size: 50px;
+    font-size: 45px;
     font-weight: 900;
     line-height: 55px;
 }
@@ -308,22 +308,26 @@
     width: 92%;
     padding: 0 4%;
     height: 300px;
+    overflow: hidden;
+    text-align: center;
   }
   .white{
     position: absolute;
-    left: 0;
+    left: -40vw;
     top: 0;
-    width: 100vw;
+    width: 180vw;
     height: 300px;
     z-index: 1;
     object-fit: cover;
 }
   /* Content inside banner now takes most of available width */
   .content {
-    width: 80%;
+    width: 70%;
+    left: 15%;
+    top: 25%;
   }
   .heading {
-    font-size: 35px;
+    font-size: 32px;
   }
   .text {
     font-size: 18px;
@@ -332,7 +336,7 @@
     font-size: 24px;
   }
   .quotetext{
-    font-size: 28px;
+    font-size: 22px;
     padding-top: 40px;
   }
   .heading1{
@@ -444,31 +448,39 @@
   }
 
   .blue{
-    background-color: #00eaff;
-    padding: 50px 0 150px;
-    position: relative;
-  }
-
-  .blue2{
     background-color: #007bc7;
     padding: 50px 0 150px;
     position: relative;
   }
 
+  .blue2{
+    background-color: #ffc689;
+    padding: 50px 0 150px;
+    position: relative;
+  }
+
   .blue3{
-    background-color: #0035c7;
+    background-color: rgb(216, 133, 255);
     padding: 50px 0 150px;
     position: relative;
   }
   .marginbtm{
-    background-color: #9800c7;
     position: relative;
+  }
+  .emerslider{
+    background-color: #ffc689;
+  }
+  .recslider{
+    background-color: rgb(216, 133, 255);
+  }
+  .featslider{
+    background-color: #007bc7;
   }
 .frog5{
     position: absolute;
     width: 12vw;
     height: auto;
-    top: 90vh;
+    top: 95vh;
 }
   .frog2{
     position: absolute;

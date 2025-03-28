@@ -38,7 +38,7 @@ export default function Hero() {
       />
       <Image
         className={styles.hero02}
-        src={"/Home/hero10.png"}
+        src={"/Home/hero05.png"}
         width={1000}
         height={1000}
         alt="hero"

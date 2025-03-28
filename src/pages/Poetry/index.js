@@ -118,7 +118,7 @@ export default function Index() {
         />
         <Image
           className={styles.white}
-          src={"/Home/hero10.png"}
+          src={"/Home/hero05.png"}
           width={400}
           height={400}
           alt="image"
@@ -148,9 +148,9 @@ export default function Index() {
 
 <div>
 <div className={styles.blue}>
-  <div className={styles.position}>
+  {/* <div className={styles.position}>
     <SlideInDiv src={'/Home/20.png'} />
-  </div>
+  </div> */}
   <div className={styles.heading1}>Featured Poetry</div>
   <FadeInSection>
     <Poem Poemdata={Poemdata[0]} big={true}/>
@@ -164,9 +164,9 @@ export default function Index() {
   </div>
 
   <div className={styles.blue2}>
-  <div className={styles.position2}>
+  {/* <div className={styles.position2}>
   <SlideInDiv src={'/Home/21.png'} />
-  </div>
+  </div> */}
   <Image
   src="/animations/rabbit.gif"  // Update with your actual GIF path
   className={styles.frog2}
@@ -210,8 +210,9 @@ export default function Index() {
     <Poem Poemdata={Poemdata[2]} big={false}/>
   </FadeInSection>
   </div>
+  <div className={styles.marginbtm} />
 
-  <div className={styles.marginbtm}>
+  {/* <div className={styles.marginbtm}>
   <Image
   src="/Home/cat.gif"  // Update with your actual GIF path
   className={styles.frog5}
@@ -222,7 +223,7 @@ export default function Index() {
 />
     <NewSlider titlehead={'Prose'} title={'Prose'} slider={3}/>
     <NewSliderCnf titlehead={'Cnf'} title={'Creative Non-Fiction'} slider={2}/>
-  </div>
+  </div> */}
 </div>
 
     </div>

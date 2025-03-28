@@ -199,7 +199,7 @@ export default function Index() {
         />
         <Image
           className={styles.white}
-          src={"/Home/hero10.png"}
+          src={"/Home/hero05.png"}
           width={400}
           height={400}
           alt="image"
@@ -228,7 +228,7 @@ export default function Index() {
 </div>
 
 <div>
-<div className={styles.blue}>
+<div className={styles.blue2}>
 <div className={styles.position}>
     <SlideInDiv src={'/Home/22.png'} />
   </div>
@@ -264,8 +264,12 @@ export default function Index() {
       alt="animated GIF"
       unoptimized // Ensures Next.js doesn't optimize the GIF as a static image
     />
+    <div className={styles.featslider}>
     <NewSlider titlehead={'Prose'} title={'Featured Creative Non-Fiction'} slider={3}/>
+    </div>
+    <div className={styles.recslider}>
     <NewSlider titlehead={'Prose'} title={'Recent Creative Non-Fiction'} slider={3}/>
+    </div>
 
   </div>
 </div>

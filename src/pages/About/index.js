@@ -56,7 +56,7 @@ export default function Index() {
         />
         <Image
           className={styles.white}
-          src={"/Home/hero10.png"}
+          src={"/Home/hero05.png"}
           width={400}
           height={400}
           alt="image"
@@ -149,7 +149,7 @@ export default function Index() {
         </motion.div>
 
         {/* Second Flex Container: Content Up, Image Down */}
-        <motion.div ref={flexRef2} className={styles.aflex}>
+        {/* <motion.div ref={flexRef2} className={styles.aflex}>
           <motion.div style={{ y: contentY2 }}>
             <div className={styles.card}>
               <div className={styles.heading}>Our Collections</div>
@@ -177,7 +177,24 @@ export default function Index() {
               alt="Snail"
             />
           </motion.div>
-        </motion.div>
+        </motion.div> */}
+      </div>
+
+      <div className={styles.flexcard}>
+      <Image
+              className={styles.img3}
+              src={"/Home/img1.jpg"}
+              width={400}
+              height={400}
+              alt="testimonial"
+            />
+            <div>
+            <div className={styles.heading}>Our Collections</div>
+              <div>
+              Our Collections at Diorama are a treasure trove of creativity, learning, and wonder designed specifically for young minds. Each collection is meticulously curated to inspire curiosity and encourage imaginative exploration. From vibrant story compilations and interactive art galleries to engaging science experiments and playful puzzles, our collections span a wide array of topics and themes that celebrate childhood in all its diversity. Whether you’re looking for heartwarming tales, educational activities, or creative challenges, our collections offer a unique blend of fun and learning. Every issue is infused with colorful illustrations, thoughtful narratives, and hands-on projects that empower children to discover their passions and expand their horizons. At Diorama, our collections aren’t just about reading—they’re about experiencing the magic of storytelling and the joy of learning, making every page a journey of discovery for children and families alike.
+              </div>
+              <div className={styles.btn}>Learn More</div>
+            </div>
       </div>
 
        {/* Contact Us Section */}

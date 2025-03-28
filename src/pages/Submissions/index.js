@@ -44,7 +44,7 @@ export default function SubmissionsPage() {
         />
         <Image
           className={styles.white}
-          src={"/Home/hero10.png"}
+          src={"/Home/hero05.png"}
           width={400}
           height={400}
           alt="image"
@@ -79,6 +79,20 @@ export default function SubmissionsPage() {
           </ul>
         </motion.div>
       </section> */}
+            <div className={styles.animatedVideoContainer}>
+  <motion.video
+    src="/Home/toad.mp4"  // Update with your actual video path
+    autoPlay
+    loop
+    muted
+    playsInline
+    className={styles.frog}
+  />
+  <div className={styles.containercon}>
+    <div className={styles.quotetext}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+    <div className={styles.quoteauthor}>- Lorem ipsum</div>
+  </div>
+</div>
 
       <Sub />
 
