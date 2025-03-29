@@ -192,7 +192,7 @@ export default function Index() {
       <div className={styles.banner}>
         <Image
           className={styles.squirrel}
-          src={"/banners/10 (3).jpg"}
+          src={"/Home/cnfs2.svg"}
           width={400}
           height={400}
           alt="image"

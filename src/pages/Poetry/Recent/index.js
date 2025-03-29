@@ -173,7 +173,7 @@ export default function Index() {
       <div className={styles.banner}>
         <Image
           className={styles.squirrel}
-          src={"/banners/10 (2).jpg"}
+          src={"/Home/32.svg"}
           width={400}
           height={400}
           alt="image"
