@@ -44,7 +44,7 @@ export default function Hero() {
         alt="hero"
       />
       <div className={styles.text}>
-        <div>Some heading goes here</div>
+        <div>Some heading goes here 1</div>
         <div>Some text goes here</div>
       </div>
       <Image
